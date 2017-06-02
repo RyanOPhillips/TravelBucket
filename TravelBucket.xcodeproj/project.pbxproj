@@ -7,23 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
+		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
-		0FCFBA5C1EE0802200498C77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5B1EE0802200498C77 /* ViewController.swift */; };
+		0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */; };
 		0FCFBA5F1EE0802200498C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5D1EE0802200498C77 /* Main.storyboard */; };
 		0FCFBA621EE0802200498C77 /* TravelBucket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA601EE0802200498C77 /* TravelBucket.xcdatamodeld */; };
 		0FCFBA641EE0802200498C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA631EE0802200498C77 /* Assets.xcassets */; };
 		0FCFBA671EE0802200498C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */; };
+		0FCFBA6F1EE0818F00498C77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA6E1EE0818F00498C77 /* GoogleService-Info.plist */; };
+		1EA083CE8FD9342F2B121C27 /* Pods_TravelBucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0F1EC1571EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		0F1EC1591EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftOSX;
+		};
+		0F1EC15B1EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		0F1EC15D1EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		0F1EC15F1EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		0F1EC1611EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftOSXDemo;
+		};
+		0F1EC1631EE0B117002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		0F1EC1651EE0B136002098CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
 		0FCFBA561EE0802200498C77 /* TravelBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFBA591EE0802200498C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FCFBA5B1EE0802200498C77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0FCFBA5E1EE0802200498C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FCFBA611EE0802200498C77 /* TravelBucket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelBucket.xcdatamodel; sourceTree = "<group>"; };
 		0FCFBA631EE0802200498C77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FCFBA661EE0802200498C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCFBA681EE0802200498C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FCFBA6E1EE0818F00498C77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelBucket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86D9A1A97ED038C9DD7EEF7 /* Pods-TravelBucket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelBucket.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelBucket/Pods-TravelBucket.release.xcconfig"; sourceTree = "<group>"; };
+		DE38D099C946E3A2FBBDEBB0 /* Pods-TravelBucket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelBucket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelBucket/Pods-TravelBucket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +101,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA083CE8FD9342F2B121C27 /* Pods_TravelBucket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F1EC14E1EE0B117002098CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F1EC1581EE0B117002098CE /* OAuthSwift.framework */,
+				0F1EC15A1EE0B117002098CE /* OAuthSwift.framework */,
+				0F1EC15C1EE0B117002098CE /* OAuthSwift.framework */,
+				0F1EC15E1EE0B117002098CE /* OAuthSwift.framework */,
+				0F1EC1601EE0B117002098CE /* OAuthSwiftDemo.app */,
+				0F1EC1621EE0B117002098CE /* OAuthSwiftOSXDemo.app */,
+				0F1EC1641EE0B117002098CE /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0FCFBA4D1EE0802200498C77 = {
 			isa = PBXGroup;
 			children = (
 				0FCFBA581EE0802200498C77 /* TravelBucket */,
 				0FCFBA571EE0802200498C77 /* Products */,
+				3EE9A049416F3A40380AE284 /* Pods */,
+				28B8C462632FD827227C6A22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +143,36 @@
 		0FCFBA581EE0802200498C77 /* TravelBucket */ = {
 			isa = PBXGroup;
 			children = (
+				0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */,
 				0FCFBA591EE0802200498C77 /* AppDelegate.swift */,
-				0FCFBA5B1EE0802200498C77 /* ViewController.swift */,
+				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
 				0FCFBA5D1EE0802200498C77 /* Main.storyboard */,
+				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
 				0FCFBA631EE0802200498C77 /* Assets.xcassets */,
 				0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */,
 				0FCFBA681EE0802200498C77 /* Info.plist */,
 				0FCFBA601EE0802200498C77 /* TravelBucket.xcdatamodeld */,
+				0FCFBA6E1EE0818F00498C77 /* GoogleService-Info.plist */,
+				0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */,
 			);
 			path = TravelBucket;
+			sourceTree = "<group>";
+		};
+		28B8C462632FD827227C6A22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EE9A049416F3A40380AE284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE38D099C946E3A2FBBDEBB0 /* Pods-TravelBucket.debug.xcconfig */,
+				D86D9A1A97ED038C9DD7EEF7 /* Pods-TravelBucket.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,13 +182,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FCFBA6B1EE0802200498C77 /* Build configuration list for PBXNativeTarget "TravelBucket" */;
 			buildPhases = (
+				5860DD8EC2534F7889711AFF /* [CP] Check Pods Manifest.lock */,
 				0FCFBA521EE0802200498C77 /* Sources */,
 				0FCFBA531EE0802200498C77 /* Frameworks */,
 				0FCFBA541EE0802200498C77 /* Resources */,
+				661CC650E078C66B948F6E05 /* [CP] Embed Pods Frameworks */,
+				4BA66C9A0D0C332F09631106 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0F1EC1661EE0B136002098CE /* PBXTargetDependency */,
 			);
 			name = TravelBucket;
 			productName = TravelBucket;
@@ -115,6 +227,12 @@
 			mainGroup = 0FCFBA4D1EE0802200498C77;
 			productRefGroup = 0FCFBA571EE0802200498C77 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0F1EC14E1EE0B117002098CE /* Products */;
+					ProjectRef = 0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0FCFBA551EE0802200498C77 /* TravelBucket */,
@@ -122,11 +240,64 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		0F1EC1581EE0B117002098CE /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 0F1EC1571EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F1EC15A1EE0B117002098CE /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 0F1EC1591EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F1EC15C1EE0B117002098CE /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 0F1EC15B1EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F1EC15E1EE0B117002098CE /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 0F1EC15D1EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F1EC1601EE0B117002098CE /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = 0F1EC15F1EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F1EC1621EE0B117002098CE /* OAuthSwiftOSXDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftOSXDemo.app;
+			remoteRef = 0F1EC1611EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F1EC1641EE0B117002098CE /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = 0F1EC1631EE0B117002098CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		0FCFBA541EE0802200498C77 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCFBA6F1EE0818F00498C77 /* GoogleService-Info.plist in Resources */,
 				0FCFBA671EE0802200498C77 /* LaunchScreen.storyboard in Resources */,
 				0FCFBA641EE0802200498C77 /* Assets.xcassets in Resources */,
 				0FCFBA5F1EE0802200498C77 /* Main.storyboard in Resources */,
@@ -135,18 +306,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BA66C9A0D0C332F09631106 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelBucket/Pods-TravelBucket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5860DD8EC2534F7889711AFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		661CC650E078C66B948F6E05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelBucket/Pods-TravelBucket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FCFBA521EE0802200498C77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCFBA5C1EE0802200498C77 /* ViewController.swift in Sources */,
+				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
 				0FCFBA621EE0802200498C77 /* TravelBucket.xcdatamodeld in Sources */,
 				0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */,
+				0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */,
+				0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F1EC1661EE0B136002098CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 0F1EC1651EE0B136002098CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0FCFBA5D1EE0802200498C77 /* Main.storyboard */ = {
@@ -265,6 +494,7 @@
 		};
 		0FCFBA6C1EE0802200498C77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE38D099C946E3A2FBBDEBB0 /* Pods-TravelBucket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XG932QPWS7;
@@ -278,6 +508,7 @@
 		};
 		0FCFBA6D1EE0802200498C77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86D9A1A97ED038C9DD7EEF7 /* Pods-TravelBucket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XG932QPWS7;
@@ -308,6 +539,7 @@
 				0FCFBA6D1EE0802200498C77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

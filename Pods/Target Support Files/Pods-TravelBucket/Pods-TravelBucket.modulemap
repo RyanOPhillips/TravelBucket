@@ -1,0 +1,6 @@
+framework module Pods_TravelBucket {
+  umbrella header "Pods-TravelBucket-umbrella.h"
+
+  export *
+  module * { export * }
+}
