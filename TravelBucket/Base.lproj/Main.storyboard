@@ -21,32 +21,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TravelBucket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv1-Ed-zE3">
-                                <rect key="frame" x="39" y="126" width="298.5" height="63.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TravelBucket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv1-Ed-zE3">
+                                <rect key="frame" x="38" y="60" width="299" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tof-gJ-uOe">
-                                <rect key="frame" x="178" y="448" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tof-gJ-uOe">
+                                <rect key="frame" x="177" y="585" width="20" height="20"/>
                             </activityIndicatorView>
-                            <webView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-fj-3e3">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N2-Vc-8bT" customClass="RoundedOutlineButton" customModule="TravelBucket" customModuleProvider="target">
+                                <rect key="frame" x="100" y="469" width="175" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="mqN-Vv-NhY"/>
+                                    <constraint firstAttribute="height" constant="50" id="y08-6N-huD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tof-gJ-uOe" firstAttribute="top" secondItem="9N2-Vc-8bT" secondAttribute="bottom" constant="66" id="8u7-7r-wkf"/>
+                            <constraint firstItem="Yv1-Ed-zE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEO-4S-SLo"/>
+                            <constraint firstAttribute="bottom" secondItem="9N2-Vc-8bT" secondAttribute="bottom" constant="148" id="SoS-CT-7WF"/>
+                            <constraint firstItem="9N2-Vc-8bT" firstAttribute="centerX" secondItem="tof-gJ-uOe" secondAttribute="centerX" id="UOg-Ss-l6z"/>
                             <constraint firstItem="Yv1-Ed-zE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Voi-Zg-Zgw"/>
                             <constraint firstItem="Yv1-Ed-zE3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ajP-yA-NoC"/>
-                            <constraint firstItem="fiQ-fj-3e3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f8t-bP-GCI"/>
-                            <constraint firstItem="fiQ-fj-3e3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEd-3C-pGN"/>
+                            <constraint firstItem="9N2-Vc-8bT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cEp-nY-hyn"/>
+                            <constraint firstItem="9N2-Vc-8bT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="omY-Zl-3mY"/>
+                            <constraint firstItem="9N2-Vc-8bT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qvR-Xl-JQR"/>
+                            <constraint firstItem="9N2-Vc-8bT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yPl-cJ-S9h"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginIndicator" destination="tof-gJ-uOe" id="nud-Vo-WyD"/>
-                        <outlet property="loginWebView" destination="fiQ-fj-3e3" id="lKx-JZ-Dud"/>
                         <segue destination="Soa-6b-qTh" kind="presentation" identifier="signinsegue" id="sRe-7m-0uc"/>
                     </connections>
                 </viewController>

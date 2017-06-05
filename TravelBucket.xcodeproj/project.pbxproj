@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineButton.swift; sourceTree = "<group>"; };
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F04F7651EE5FD4C004FA84E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0F04F76C1EE5FD56004FA84E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
+				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0F04F76D1EE5FD60004FA84E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		0F1EC14E1EE0B117002098CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,11 +169,12 @@
 		0FCFBA581EE0802200498C77 /* TravelBucket */ = {
 			isa = PBXGroup;
 			children = (
+				0F04F7651EE5FD4C004FA84E /* Model */,
+				0F04F76D1EE5FD60004FA84E /* View */,
+				0F04F76C1EE5FD56004FA84E /* Controller */,
 				0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */,
 				0FCFBA591EE0802200498C77 /* AppDelegate.swift */,
-				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
 				0FCFBA5D1EE0802200498C77 /* Main.storyboard */,
-				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
 				0FCFBA631EE0802200498C77 /* Assets.xcassets */,
 				0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */,
 				0FCFBA681EE0802200498C77 /* Info.plist */,
@@ -360,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
+				0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */,
 				0FCFBA621EE0802200498C77 /* TravelBucket.xcdatamodeld in Sources */,
 				0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */,
 				0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */,
