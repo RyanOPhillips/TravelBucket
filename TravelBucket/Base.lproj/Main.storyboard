@@ -22,17 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TravelBucket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv1-Ed-zE3">
-                                <rect key="frame" x="39" y="126" width="298.5" height="63.5"/>
+                                <rect key="frame" x="38" y="28" width="298.5" height="63.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tof-gJ-uOe">
-                                <rect key="frame" x="178" y="448" width="20" height="20"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-Cl-W4L">
+                                <rect key="frame" x="68" y="100" width="240" height="518"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <webView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-fj-3e3">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -40,13 +37,10 @@
                         <constraints>
                             <constraint firstItem="Yv1-Ed-zE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Voi-Zg-Zgw"/>
                             <constraint firstItem="Yv1-Ed-zE3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ajP-yA-NoC"/>
-                            <constraint firstItem="fiQ-fj-3e3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f8t-bP-GCI"/>
-                            <constraint firstItem="fiQ-fj-3e3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEd-3C-pGN"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginIndicator" destination="tof-gJ-uOe" id="nud-Vo-WyD"/>
-                        <outlet property="loginWebView" destination="fiQ-fj-3e3" id="lKx-JZ-Dud"/>
+                        <outlet property="loginWebView" destination="a1b-Cl-W4L" id="DY8-Ko-IIQ"/>
                         <segue destination="Soa-6b-qTh" kind="presentation" identifier="signinsegue" id="sRe-7m-0uc"/>
                     </connections>
                 </viewController>
@@ -57,7 +51,7 @@
         <!--InstagramLoginVC-->
         <scene sceneID="Aah-hT-3Eh">
             <objects>
-                <viewController title="InstagramLoginVC" id="t8a-Ev-ATa" sceneMemberID="viewController">
+                <viewController title="InstagramLoginVC" id="t8a-Ev-ATa" customClass="BucketListViewController" customModule="TravelBucket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f4m-KO-jze"/>
                         <viewControllerLayoutGuide type="bottom" id="YGN-ZW-siy"/>
@@ -67,7 +61,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hOi-IM-exb"/>
+                    <navigationItem key="navigationItem" id="hOi-IM-exb">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="pol-Js-U3v">
+                            <connections>
+                                <action selector="logoutTapped:" destination="t8a-Ev-ATa" id="bQg-cO-DAd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="7Pc-rA-i3o"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yk-9X-S6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +90,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4o-jl-NNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="136.28185907046478"/>
+            <point key="canvasLocation" x="948" y="136"/>
         </scene>
     </scenes>
 </document>

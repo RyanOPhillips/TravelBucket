@@ -11,4 +11,6 @@ target 'TravelBucket' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'OAuthSwift', '~> 1.1.0'
+    pod 'Auth0', '~> 1.0'
+    pod 'Lock', '~> 2.0'
 end

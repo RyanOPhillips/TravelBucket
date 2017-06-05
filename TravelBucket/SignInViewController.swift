@@ -7,66 +7,45 @@
 //
 
 import UIKit
+import Auth0
+import Lock
 
 class SignInViewController: UIViewController {
     
     @IBOutlet weak var loginWebView: UIWebView!
-    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
+//    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        loginWebView.delegate = self as! UIWebViewDelegate
-        unSignedRequest()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    //MARK: - unSignedRequest
-    func unSignedRequest () {
-        let authURL = String(format: "%@?client_id=%@&redirect_uri=%@&response_type=token&scope=%@&DEBUG=True", arguments: [INSTAGRAM_IDS.INSTAGRAM_AUTHURL,INSTAGRAM_IDS.INSTAGRAM_CLIENT_ID,INSTAGRAM_IDS.INSTAGRAM_REDIRECT_URI, INSTAGRAM_IDS.INSTAGRAM_SCOPE ])
-        let urlRequest =  URLRequest.init(url: URL.init(string: authURL)!)
-        loginWebView.loadRequest(urlRequest)
-    }
-    
-    func checkRequestForCallbackURL(request: URLRequest) -> Bool {
-        
-        let requestURLString = (request.url?.absoluteString)! as String
-        
-        if requestURLString.hasPrefix(INSTAGRAM_IDS.INSTAGRAM_REDIRECT_URI) {
-            let range: Range<String.Index> = requestURLString.range(of: "#access_token=")!
-            handleAuth(authToken: requestURLString.substring(from: range.upperBound))
-            return false;
+//        loginIndicator.startAnimating()
+        loginWebView.loadRequest(URLRequest(url: URL(string: "https://ryanphillips.auth0.com/login?client=aMNM-yN36nC4FleD9G_L9rk1-gckAsNA")!))
+        // Do any additional setup after loading the view, typically from a nib.
+        Auth0
+            .webAuth()
+            .start {
+                switch $0 {
+                case .failure(let error):
+                    // Handle the error
+                    print("Error: \(error)")
+                case .success(let credentials):
+                    // Do something with credentials e.g.: save them.
+                    // Auth0 will automatically dismiss the hosted login page
+                    print("Credentials: \(credentials)")
+                    
+                    
+                }
+                
         }
-        return true
+        Lock
+            .classic()
+            // withConnections, withOptions, withStyle, etc
+            .onAuth { credentials in
+                // Save the Credentials object
+            }
+            .present(from: self)
     }
     
-    func handleAuth(authToken: String)  {
-        print("Instagram authentication token ==", authToken)
-    }
     
-    
-    // MARK: - UIWebViewDelegate
-    
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        return checkRequestForCallbackURL(request: request)
-    }
-    
-    func webViewDidStartLoad(_ webView: UIWebView) {
-        loginIndicator.isHidden = false
-        loginIndicator.startAnimating()
-    }
-    
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        loginIndicator.isHidden = true
-        loginIndicator.stopAnimating()
-    }
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        webViewDidFinishLoad(webView)
-    }
+
 }
 

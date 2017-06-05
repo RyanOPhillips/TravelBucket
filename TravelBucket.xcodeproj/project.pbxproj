@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
+		0F3B4E461EE5B70A00BDC50A /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F3B4E451EE5B70A00BDC50A /* Auth0.plist */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
 		0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */; };
 		0FCFBA5F1EE0802200498C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5D1EE0802200498C77 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
+		0F3B4E451EE5B70A00BDC50A /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Auth0.plist; sourceTree = "<group>"; };
 		0FCFBA561EE0802200498C77 /* TravelBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFBA591EE0802200498C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -146,14 +148,15 @@
 				0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */,
 				0FCFBA591EE0802200498C77 /* AppDelegate.swift */,
 				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
-				0FCFBA5D1EE0802200498C77 /* Main.storyboard */,
 				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
+				0FCFBA5D1EE0802200498C77 /* Main.storyboard */,
 				0FCFBA631EE0802200498C77 /* Assets.xcassets */,
 				0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */,
 				0FCFBA681EE0802200498C77 /* Info.plist */,
 				0FCFBA601EE0802200498C77 /* TravelBucket.xcdatamodeld */,
 				0FCFBA6E1EE0818F00498C77 /* GoogleService-Info.plist */,
 				0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */,
+				0F3B4E451EE5B70A00BDC50A /* Auth0.plist */,
 			);
 			path = TravelBucket;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3B4E461EE5B70A00BDC50A /* Auth0.plist in Resources */,
 				0FCFBA6F1EE0818F00498C77 /* GoogleService-Info.plist in Resources */,
 				0FCFBA671EE0802200498C77 /* LaunchScreen.storyboard in Resources */,
 				0FCFBA641EE0802200498C77 /* Assets.xcassets in Resources */,

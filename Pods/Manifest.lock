@@ -1,4 +1,5 @@
 PODS:
+  - Auth0 (1.5.0)
   - Firebase/Auth (3.17.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -39,16 +40,24 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - Lock (2.2.0):
+    - Auth0 (~> 1.5)
+    - Lock/Classic (= 2.2.0)
+  - Lock/Classic (2.2.0):
+    - Auth0 (~> 1.5)
   - OAuthSwift (1.1.1)
 
 DEPENDENCIES:
+  - Auth0 (~> 1.0)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Lock (~> 2.0)
   - OAuthSwift (~> 1.1.0)
 
 SPEC CHECKSUMS:
+  Auth0: d055a1d6666a8bbab731a4bd5e896cd0159392d4
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -58,8 +67,9 @@ SPEC CHECKSUMS:
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  Lock: 5888af7ab30772de4d06872e53c8a22a2a36b0a3
   OAuthSwift: 6e3a103b3e5639411769cc7e199ec7e14bd1547f
 
-PODFILE CHECKSUM: 7d4c01cd493f4fb41b35ac0bbef8a6a906576bec
+PODFILE CHECKSUM: 7ddb6b534094921663ebf680cc0437e4bf831e50
 
 COCOAPODS: 1.2.1
