@@ -1,5 +1,5 @@
 //
-//  mapViewController.swift
+//  MapViewController.swift
 //  TravelBucket
 //
 //  Created by Ryan Phillips on 6/6/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class mapViewController: UIViewController {
+class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

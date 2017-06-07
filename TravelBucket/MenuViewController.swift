@@ -1,5 +1,5 @@
 //
-//  testViewController.swift
+//  MenuViewController.swift
 //  TravelBucket
 //
 //  Created by Ryan Phillips on 6/6/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class testViewController: UIViewController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

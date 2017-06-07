@@ -13,7 +13,9 @@
 		0F04F7791EE74493004FA84E /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */; };
 		0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */; };
 		0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */; };
-		0F04F77F1EE75415004FA84E /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F77E1EE75415004FA84E /* testViewController.swift */; };
+		0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F77E1EE75415004FA84E /* MenuViewController.swift */; };
+		0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7801EE75C82004FA84E /* MapViewController.swift */; };
+		0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7821EE79F97004FA84E /* MaterialView.swift */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
@@ -92,7 +94,9 @@
 		0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0F04F77E1EE75415004FA84E /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
+		0F04F77E1EE75415004FA84E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0F04F7801EE75C82004FA84E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0F04F7821EE79F97004FA84E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			children = (
 				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
 				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
+				0F04F77E1EE75415004FA84E /* MenuViewController.swift */,
+				0F04F7801EE75C82004FA84E /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */,
+				0F04F7821EE79F97004FA84E /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -200,7 +207,6 @@
 				0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */,
 				0FCFBA591EE0802200498C77 /* AppDelegate.swift */,
 				0FCFBA5D1EE0802200498C77 /* Main.storyboard */,
-				0F04F77E1EE75415004FA84E /* testViewController.swift */,
 				0FCFBA631EE0802200498C77 /* Assets.xcassets */,
 				0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */,
 				0FCFBA681EE0802200498C77 /* Info.plist */,
@@ -416,7 +422,9 @@
 				0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */,
 				0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */,
 				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
-				0F04F77F1EE75415004FA84E /* testViewController.swift in Sources */,
+				0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */,
+				0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */,
+				0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */,
 				0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */,
 				0F04F7791EE74493004FA84E /* Item+CoreDataProperties.swift in Sources */,
 				0FCFBA621EE0802200498C77 /* TravelBucket.xcdatamodeld in Sources */,
