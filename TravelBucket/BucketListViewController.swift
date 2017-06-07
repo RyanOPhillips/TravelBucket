@@ -21,6 +21,7 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         
+        generateTestData()
         attemptFetch()
 
         // Do any additional setup after loading the view.
@@ -112,4 +113,54 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
             break
         }
     }
+    
+    func generateTestData() {
+        let item = Item(context: context)
+        item.name = "Eiffel Tower"
+        item.date = Date() as NSDate
+        item.notes = "This is what it was like when I visited the Eiffel Tower"
+        item.lat = 2.2945
+        item.long = 48.8584
+        
+        let item2 = Item(context: context)
+        item2.name = "Great Pyramid of Giza"
+        item2.date = Date() as NSDate
+        item2.notes = "When I visited the Great Pyramids, it was very hot and sunny"
+        item2.lat = 31.1342
+        item2.long = 29.9792
+        
+        let item3 = Item(context: context)
+        item3.name = "Sydney Opera House"
+        item3.date = Date() as NSDate
+        item3.notes = "The Sydney Opera House was amazing! It's so much bigger than you would think"
+        item3.lat = 151.2153
+        item3.long = 33.8568
+        
+        let item4 = Item(context: context)
+        item4.name = "Statue of Liberty"
+        item4.date = Date() as NSDate
+        item4.notes = "I will never forget when I first saw the Statue of Liberty"
+        item4.lat = 74.0445
+        item4.long = 40.6892
+        
+        let item5 = Item(context: context)
+        item5.name = "Giant's Causeway"
+        item5.date = Date() as NSDate
+        item5.notes = "My friend from Ireland took me to see the Giant's Causeway. It was cold and rainy"
+        item5.lat = 6.5116
+        item5.long = 55.2408
+        
+        let item6 = Item(context: context)
+        item6.name = "Great Wall of China"
+        item6.date = Date() as NSDate
+        item6.notes = "It was very warm, but I enjoyed seeing this with my family."
+        item6.lat = 116.5704
+        item6.long = 40.4319
+        
+        ad.saveContext()
+        }
+    
+    
 }
+
+

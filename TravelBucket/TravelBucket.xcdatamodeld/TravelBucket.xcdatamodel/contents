@@ -10,11 +10,10 @@
         <attribute name="long" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toItem" inverseEntity="Image" syncable="YES"/>
     </entity>
     <elements>
         <element name="Image" positionX="-27" positionY="278" width="128" height="73"/>
-        <element name="Item" positionX="-272" positionY="203" width="128" height="148"/>
+        <element name="Item" positionX="-272" positionY="203" width="128" height="135"/>
     </elements>
 </model>

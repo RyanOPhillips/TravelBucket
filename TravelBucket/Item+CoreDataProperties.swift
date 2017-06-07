@@ -21,7 +21,5 @@ extension Item {
     @NSManaged public var long: Double
     @NSManaged public var date: NSDate?
     @NSManaged public var notes: String?
-    @NSManaged public var type: String?
-    @NSManaged public var toImage: Image?
 
 }
