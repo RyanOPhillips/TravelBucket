@@ -175,7 +175,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-br-6zf">
                                                     <rect key="frame" x="8" y="8" width="327" height="134"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Xo-TW-ziM">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC_0180.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Xo-TW-ziM">
                                                             <rect key="frame" x="8" y="17" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="OhE-DC-YOi"/>
@@ -227,7 +227,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="H9q-br-6zf" secondAttribute="trailing" constant="8" id="3RK-DQ-ibm"/>
                                                 <constraint firstAttribute="bottom" secondItem="H9q-br-6zf" secondAttribute="bottom" constant="8" id="6vE-oY-aj6"/>
@@ -246,6 +246,9 @@
                             <constraint firstItem="47l-zd-AMU" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" constant="20" id="ep0-lW-qUn"/>
                             <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leadingMargin" id="fbV-WN-sTE"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Bucket List" id="Q9a-PF-QMl">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="sQv-fJ-jv9"/>
@@ -276,4 +279,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DSC_0180.jpg" width="6000" height="4000"/>
+    </resources>
 </document>
