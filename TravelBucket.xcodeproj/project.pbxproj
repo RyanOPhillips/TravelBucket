@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */; };
+		0F04F7731EE702E9004FA84E /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F04F7721EE702E9004FA84E /* LocalAuthentication.framework */; };
+		0F04F7781EE74493004FA84E /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7741EE74493004FA84E /* Item+CoreDataClass.swift */; };
+		0F04F7791EE74493004FA84E /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */; };
+		0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */; };
+		0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */; };
+		0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F77E1EE75415004FA84E /* MenuViewController.swift */; };
+		0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7801EE75C82004FA84E /* MapViewController.swift */; };
+		0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7821EE79F97004FA84E /* MaterialView.swift */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
@@ -79,6 +88,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineButton.swift; sourceTree = "<group>"; };
+		0F04F7721EE702E9004FA84E /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		0F04F7741EE74493004FA84E /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0F04F77E1EE75415004FA84E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		0F04F7801EE75C82004FA84E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0F04F7821EE79F97004FA84E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F04F7731EE702E9004FA84E /* LocalAuthentication.framework in Frameworks */,
 				1EA083CE8FD9342F2B121C27 /* Pods_TravelBucket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +127,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F04F7651EE5FD4C004FA84E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F04F7741EE74493004FA84E /* Item+CoreDataClass.swift */,
+				0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */,
+				0F04F77D1EE744E9004FA84E /* Generated */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0F04F76C1EE5FD56004FA84E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
+				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
+				0F04F77E1EE75415004FA84E /* MenuViewController.swift */,
+				0F04F7801EE75C82004FA84E /* MapViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0F04F76D1EE5FD60004FA84E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */,
+				0F04F7821EE79F97004FA84E /* MaterialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0F04F77D1EE744E9004FA84E /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */,
+				0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
 		0F1EC14E1EE0B117002098CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,11 +201,12 @@
 		0FCFBA581EE0802200498C77 /* TravelBucket */ = {
 			isa = PBXGroup;
 			children = (
+				0F04F7651EE5FD4C004FA84E /* Model */,
+				0F04F76D1EE5FD60004FA84E /* View */,
+				0F04F76C1EE5FD56004FA84E /* Controller */,
 				0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */,
 				0FCFBA591EE0802200498C77 /* AppDelegate.swift */,
-				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
 				0FCFBA5D1EE0802200498C77 /* Main.storyboard */,
-				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
 				0FCFBA631EE0802200498C77 /* Assets.xcassets */,
 				0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */,
 				0FCFBA681EE0802200498C77 /* Info.plist */,
@@ -161,6 +220,7 @@
 		28B8C462632FD827227C6A22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F04F7721EE702E9004FA84E /* LocalAuthentication.framework */,
 				114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */,
 			);
 			name = Frameworks;
@@ -359,11 +419,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */,
+				0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */,
 				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
+				0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */,
+				0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */,
+				0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */,
+				0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */,
+				0F04F7791EE74493004FA84E /* Item+CoreDataProperties.swift in Sources */,
 				0FCFBA621EE0802200498C77 /* TravelBucket.xcdatamodeld in Sources */,
 				0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */,
 				0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */,
 				0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */,
+				0F04F7781EE74493004FA84E /* Item+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

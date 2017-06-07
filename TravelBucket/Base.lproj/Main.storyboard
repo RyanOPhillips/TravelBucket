@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8jj-pm-YNx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,75 +22,209 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TravelBucket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv1-Ed-zE3">
-                                <rect key="frame" x="39" y="126" width="298.5" height="63.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tof-gJ-uOe">
-                                <rect key="frame" x="178" y="448" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tof-gJ-uOe">
+                                <rect key="frame" x="177.5" y="597" width="20" height="20"/>
                             </activityIndicatorView>
-                            <webView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-fj-3e3">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N2-Vc-8bT" customClass="RoundedOutlineButton" customModule="TravelBucket" customModuleProvider="target">
+                                <rect key="frame" x="100" y="447" width="175" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="mqN-Vv-NhY"/>
+                                    <constraint firstAttribute="height" constant="50" id="y08-6N-huD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Use Touch ID">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="useTouchIDButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bYA-hR-OWb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yv1-Ed-zE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Voi-Zg-Zgw"/>
-                            <constraint firstItem="Yv1-Ed-zE3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ajP-yA-NoC"/>
-                            <constraint firstItem="fiQ-fj-3e3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f8t-bP-GCI"/>
-                            <constraint firstItem="fiQ-fj-3e3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zEd-3C-pGN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tof-gJ-uOe" secondAttribute="bottom" constant="50" id="PLS-Vo-q09"/>
+                            <constraint firstItem="tof-gJ-uOe" firstAttribute="top" secondItem="9N2-Vc-8bT" secondAttribute="bottom" constant="100" id="fKC-LS-kn3"/>
+                            <constraint firstItem="9N2-Vc-8bT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sqk-UN-kOJ"/>
+                            <constraint firstItem="tof-gJ-uOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vXN-qG-siE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="TravelBucket" id="Daf-Ta-zwk"/>
                     <connections>
                         <outlet property="loginIndicator" destination="tof-gJ-uOe" id="nud-Vo-WyD"/>
-                        <outlet property="loginWebView" destination="fiQ-fj-3e3" id="lKx-JZ-Dud"/>
-                        <segue destination="Soa-6b-qTh" kind="presentation" identifier="signinsegue" id="sRe-7m-0uc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="921" y="137"/>
         </scene>
-        <!--InstagramLoginVC-->
-        <scene sceneID="Aah-hT-3Eh">
+        <!--Menu-->
+        <scene sceneID="rTj-AM-gDE">
             <objects>
-                <viewController title="InstagramLoginVC" id="t8a-Ev-ATa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoggedInVC" title="Menu" id="c08-MJ-MKu" customClass="MenuViewController" customModule="TravelBucket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f4m-KO-jze"/>
-                        <viewControllerLayoutGuide type="bottom" id="YGN-ZW-siy"/>
+                        <viewControllerLayoutGuide type="top" id="HEc-Hk-CNY"/>
+                        <viewControllerLayoutGuide type="bottom" id="NZ1-Hd-HDX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2MP-l9-6dh">
+                    <view key="view" contentMode="scaleToFill" id="HYR-6F-Mmn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se6-5F-CkG">
+                                <rect key="frame" x="62.5" y="266" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="0JR-0Y-fLG"/>
+                                    <constraint firstAttribute="height" constant="50" id="UBr-YL-4r7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Go To Bucket List">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b9D-T3-xvj" kind="show" id="mQW-jh-MZF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D53-o7-Yad">
+                                <rect key="frame" x="62.5" y="351" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dhb-DK-3mw"/>
+                                    <constraint firstAttribute="width" constant="250" id="gPl-gA-jaQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Go To Map">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="O5t-3N-QWC" kind="show" id="vFp-Lk-0pH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="se6-5F-CkG" firstAttribute="leading" secondItem="D53-o7-Yad" secondAttribute="leading" id="CMc-KC-b7d"/>
+                            <constraint firstItem="D53-o7-Yad" firstAttribute="top" secondItem="se6-5F-CkG" secondAttribute="bottom" constant="35" id="Gvp-OP-u8t"/>
+                            <constraint firstItem="se6-5F-CkG" firstAttribute="centerX" secondItem="HYR-6F-Mmn" secondAttribute="centerX" id="OzP-Bd-fg9"/>
+                            <constraint firstItem="se6-5F-CkG" firstAttribute="top" secondItem="HEc-Hk-CNY" secondAttribute="bottom" constant="202" id="sG2-c1-qwq"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bu9-lc-QxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="136"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="eWp-mf-VU3">
+            <objects>
+                <viewController id="O5t-3N-QWC" customClass="MapViewController" customModule="TravelBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tCp-ul-Xx3"/>
+                        <viewControllerLayoutGuide type="bottom" id="hQp-lI-IQR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G4m-Na-qeD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hOi-IM-exb"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Map" id="MaO-a3-1Jg">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="UGk-af-VcJ"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3yk-9X-S6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZc-uE-8yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767.2" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2518" y="463"/>
+        </scene>
+        <!--BucketList-->
+        <scene sceneID="Fft-Fd-tKF">
+            <objects>
+                <viewController title="BucketList" automaticallyAdjustsScrollViewInsets="NO" id="b9D-T3-xvj" customClass="BucketListViewController" customModule="TravelBucket" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d8e-Xi-hll"/>
+                        <viewControllerLayoutGuide type="bottom" id="n0l-rA-ieX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2T0-j4-4nf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47l-zd-AMU">
+                                <rect key="frame" x="16" y="84" width="343" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="583" id="609-a2-vAP"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UEZ-Cm-mpX">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEZ-Cm-mpX" id="8JM-FP-YhA">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Wall of China" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRP-di-XAF">
+                                                    <rect key="frame" x="11" y="11" width="327" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MRP-di-XAF" firstAttribute="trailing" secondItem="8JM-FP-YhA" secondAttribute="trailingMargin" constant="3" id="6kO-Oy-HX6"/>
+                                                <constraint firstItem="MRP-di-XAF" firstAttribute="leading" secondItem="8JM-FP-YhA" secondAttribute="leadingMargin" constant="3" id="N5h-Tx-YZ2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MRP-di-XAF" secondAttribute="bottom" constant="3" id="ZCE-Vu-cU4"/>
+                                                <constraint firstItem="MRP-di-XAF" firstAttribute="top" secondItem="8JM-FP-YhA" secondAttribute="topMargin" constant="3" id="hXY-2e-zGn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n0l-rA-ieX" firstAttribute="top" secondItem="47l-zd-AMU" secondAttribute="bottom" id="Qkx-cQ-f1v"/>
+                            <constraint firstItem="47l-zd-AMU" firstAttribute="trailing" secondItem="2T0-j4-4nf" secondAttribute="trailingMargin" id="edK-eX-1V0"/>
+                            <constraint firstItem="47l-zd-AMU" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" constant="20" id="ep0-lW-qUn"/>
+                            <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leadingMargin" id="fbV-WN-sTE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bucket List" id="Q9a-PF-QMl">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="sQv-fJ-jv9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5YL-AR-SpV"/>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dcc-2n-Xjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2517.5999999999999" y="-195.6521739130435"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="j3g-jL-kh5">
+        <scene sceneID="VeM-WC-nqD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Soa-6b-qTh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pD8-KU-amz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="t8a-Ev-ATa" kind="relationship" relationship="rootViewController" id="j19-ei-sxB"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Gc-hM-Gqc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b4o-jl-NNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tyg-6j-71f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="136.28185907046478"/>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

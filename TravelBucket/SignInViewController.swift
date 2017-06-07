@@ -7,66 +7,105 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet weak var loginWebView: UIWebView!
+//    @IBOutlet weak var loginWebView: UIWebView!
     @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loginWebView.delegate = self as! UIWebViewDelegate
-        unSignedRequest()
+       loginIndicator.startAnimating()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    //MARK: - unSignedRequest
-    func unSignedRequest () {
-        let authURL = String(format: "%@?client_id=%@&redirect_uri=%@&response_type=token&scope=%@&DEBUG=True", arguments: [INSTAGRAM_IDS.INSTAGRAM_AUTHURL,INSTAGRAM_IDS.INSTAGRAM_CLIENT_ID,INSTAGRAM_IDS.INSTAGRAM_REDIRECT_URI, INSTAGRAM_IDS.INSTAGRAM_SCOPE ])
-        let urlRequest =  URLRequest.init(url: URL.init(string: authURL)!)
-        loginWebView.loadRequest(urlRequest)
-    }
-    
-    func checkRequestForCallbackURL(request: URLRequest) -> Bool {
+    @IBAction func useTouchIDButtonWasPressed(_ sender: Any) {
+        let authenticationContext = LAContext()
+        var error: NSError?
         
-        let requestURLString = (request.url?.absoluteString)! as String
-        
-        if requestURLString.hasPrefix(INSTAGRAM_IDS.INSTAGRAM_REDIRECT_URI) {
-            let range: Range<String.Index> = requestURLString.range(of: "#access_token=")!
-            handleAuth(authToken: requestURLString.substring(from: range.upperBound))
-            return false;
+        if authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            authenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "TouchID Required", reply: { (success, error) in
+                if success {
+                    self.navigateToAuthenticatedVc()
+                } else {
+                    if let error = error as? NSError {
+                        let message = self.errorMessageForLAErrorCode(errorCode: error.code)
+                        self.showAlertViewAfterEvaluatingPolicyWithMessage(message: message)
+                    }
+                }
+            })
+            
+//            Code for Touch ID, Navigating to Next Page, Handling Errors
+        }else{
+            showAlertViewForNoBiometrics()
+            return
         }
-        return true
+        
     }
     
-    func handleAuth(authToken: String)  {
-        print("Instagram authentication token ==", authToken)
+    func showAlertViewAfterEvaluatingPolicyWithMessage(message: String) {
+        showAlertWithTitle(title: "Error", message: message)
     }
     
-    
-    // MARK: - UIWebViewDelegate
-    
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        return checkRequestForCallbackURL(request: request)
+    func errorMessageForLAErrorCode(errorCode: Int) -> String {
+        var message = ""
+        
+        switch errorCode {
+        case LAError.appCancel.rawValue:
+            message = "Authentication was cancelled by application"
+            
+        case LAError.authenticationFailed.rawValue:
+            message = "The user failed to provide valid credentials"
+            
+        case LAError.invalidContext.rawValue:
+            message = "The context is invalid"
+            
+        case LAError.passcodeNotSet.rawValue:
+            message = "Passcode is not set on device"
+            
+        case LAError.systemCancel.rawValue:
+            message = "Authentication was cancelled by the system"
+            
+        case LAError.touchIDLockout.rawValue:
+            message = "Too many failed attempts"
+            
+        case LAError.touchIDNotAvailable.rawValue:
+            message = "TouchID is not available on this device"
+            
+        case LAError.userCancel.rawValue:
+            message = "The user did cancel"
+            
+        case LAError.userFallback.rawValue:
+            message = "The user chose to use the fallback"
+            
+        default:
+            message = "Did not find error code on LAError object"
+        }
+        return message
+    }
+
+    func navigateToAuthenticatedVc(){
+        
+        if let loggedInVC = storyboard?.instantiateViewController(withIdentifier: "LoggedInVC"){
+            DispatchQueue.main.async {
+                self.navigationController?.pushViewController(loggedInVC, animated: true)
+            }
+        }
     }
     
-    func webViewDidStartLoad(_ webView: UIWebView) {
-        loginIndicator.isHidden = false
-        loginIndicator.startAnimating()
+    func showAlertViewForNoBiometrics() {
+        showAlertWithTitle(title: "Error", message: "This device does not have a TouchID sensor.")
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        loginIndicator.isHidden = true
-        loginIndicator.stopAnimating()
-    }
-    
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        webViewDidFinishLoad(webView)
+    func showAlertWithTitle(title: String, message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alertVC.addAction(okAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertVC, animated: true, completion: nil)
+        }
     }
 }
-
