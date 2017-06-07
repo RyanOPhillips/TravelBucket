@@ -17,6 +17,7 @@
 		0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7801EE75C82004FA84E /* MapViewController.swift */; };
 		0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7821EE79F97004FA84E /* MaterialView.swift */; };
 		0F04F7901EE864F7004FA84E /* DSC_0180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F78F1EE864F7004FA84E /* DSC_0180.jpg */; };
+		0F04F79B1EE8677D004FA84E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F79A1EE8677D004FA84E /* ItemCell.swift */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
@@ -99,6 +100,7 @@
 		0F04F7801EE75C82004FA84E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0F04F7821EE79F97004FA84E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		0F04F78F1EE864F7004FA84E /* DSC_0180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0180.jpg; sourceTree = "<group>"; };
+		0F04F79A1EE8677D004FA84E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */,
 				0F04F7821EE79F97004FA84E /* MaterialView.swift */,
+				0F04F79A1EE8677D004FA84E /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */,
 				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
 				0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */,
+				0F04F79B1EE8677D004FA84E /* ItemCell.swift in Sources */,
 				0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */,
 				0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */,
 				0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */,

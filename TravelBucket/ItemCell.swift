@@ -10,15 +10,17 @@ import UIKit
 
 class ItemCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var thumb: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var itemDate: UILabel!
+    @IBOutlet weak var cityLocation: UILabel!
+   
+    func configureCell(item: Item) {
+        
+        name.text = item.name
+        itemDate.text = "\(item.date!)"
+        cityLocation.text = ""
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    //Add Google Places API Here
 }
