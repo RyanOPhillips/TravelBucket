@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="height" constant="583" id="609-a2-vAP"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="UEZ-Cm-mpX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="UEZ-Cm-mpX" customClass="ItemCell" customModule="TravelBucket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEZ-Cm-mpX" id="8JM-FP-YhA">
@@ -235,6 +235,12 @@
                                                 <constraint firstItem="H9q-br-6zf" firstAttribute="leading" secondItem="8JM-FP-YhA" secondAttribute="leading" constant="8" id="wD9-0X-6fB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLocation" destination="0pQ-gX-Pck" id="AIz-aR-Mwv"/>
+                                            <outlet property="itemDate" destination="BT0-9y-Moc" id="AQD-Ov-5mF"/>
+                                            <outlet property="thumb" destination="3Xo-TW-ziM" id="ul4-Tf-NfF"/>
+                                            <outlet property="title" destination="SAi-YP-LNG" id="MoC-GA-OTV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -255,6 +261,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5YL-AR-SpV"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="47l-zd-AMU" id="plC-ER-ZlH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcc-2n-Xjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
