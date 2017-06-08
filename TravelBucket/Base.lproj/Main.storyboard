@@ -155,9 +155,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Map" id="MaO-a3-1Jg">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="UGk-af-VcJ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Map" id="MaO-a3-1Jg"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="UH0-br-sE4" id="ohh-tx-UAB"/>
                     </connections>
@@ -285,7 +283,6 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Bucket List" id="Q9a-PF-QMl">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="sQv-fJ-jv9"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5YL-AR-SpV">
                             <connections>
                                 <segue destination="2Zf-1d-eta" kind="show" identifier="ItemDetailsVCNew" id="R8D-KV-rtc"/>
@@ -305,7 +302,7 @@
         <!--Add/Edit-->
         <scene sceneID="ZJ1-TQ-gUM">
             <objects>
-                <viewController id="2Zf-1d-eta" sceneMemberID="viewController">
+                <viewController id="2Zf-1d-eta" customClass="ItemDetailsVC" customModule="TravelBucket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UKA-MV-N1m"/>
                         <viewControllerLayoutGuide type="bottom" id="cRE-OY-g34"/>
@@ -341,19 +338,30 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTm-ST-5kq">
                                 <rect key="frame" x="16" y="528" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="hAR-o1-4M6"/>
                                     <constraint firstAttribute="height" constant="50" id="q6i-Fd-QmS"/>
                                 </constraints>
-                                <state key="normal" title="Set Location"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Set Location">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v17-SF-qZ7">
                                 <rect key="frame" x="16" y="603" width="343" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TKF-UR-8s7"/>
                                     <constraint firstAttribute="width" constant="343" id="Yn9-qw-Gi9"/>
                                 </constraints>
-                                <state key="normal" title="Save"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="2Zf-1d-eta" eventType="touchUpInside" id="VM8-Mb-xfW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -376,10 +384,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit" id="DhQ-de-eyc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="y89-q1-akD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="QrO-2l-HYE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateField" destination="NIz-gX-lbV" id="Reo-OH-C4S"/>
+                        <outlet property="notesField" destination="Fke-qq-ukZ" id="7y7-sh-0fV"/>
                         <outlet property="searchDisplayController" destination="eJY-kt-BRB" id="TN4-CC-CpB"/>
                     </connections>
                 </viewController>
@@ -400,7 +409,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
