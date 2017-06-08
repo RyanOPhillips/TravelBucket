@@ -11,4 +11,7 @@ target 'TravelBucket' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'OAuthSwift', '~> 1.1.0'
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    pod 'GoogleMaps'
 end
