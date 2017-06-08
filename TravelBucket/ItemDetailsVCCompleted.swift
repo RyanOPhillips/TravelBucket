@@ -1,5 +1,5 @@
 //
-//  ItemDetailsVC.swift
+//  ItemDetailsVCCompleted.swift
 //  TravelBucket
 //
 //  Created by Ryan Phillips on 6/7/17.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ItemDetailsVC: UIViewController {
+class ItemDetailsVCCompleted: UIViewController {
 
     
-    @IBOutlet weak var dateField: UITextField!
-    @IBOutlet weak var notesField: UITextField!
+//    @IBOutlet weak var notesField: UITextField!
     
     
     override func viewDidLoad() {
@@ -26,13 +25,13 @@ class ItemDetailsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func savePressed(_ sender: UIButton) {
-        
-        let item = Item(context: context)
-        
-        
-        
-    }
+//    @IBAction func savePressed(_ sender: UIButton) {
+//        
+//        let item = Item(context: context)
+//        
+//        
+//        
+//    }
     
     
     
