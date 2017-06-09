@@ -44,6 +44,7 @@
 		0F04F7E51EE9DD1A004FA84E /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F7CE1EE9DD1A004FA84E /* Icon-App-83.5x83.5@2x.png */; };
 		0F04F7E61EE9DD1A004FA84E /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F7CF1EE9DD1A004FA84E /* Icon-Small-50x50@1x.png */; };
 		0F04F7E71EE9DD1A004FA84E /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F7D01EE9DD1A004FA84E /* Icon-Small-50x50@2x.png */; };
+		0F04F7F11EEB15F9004FA84E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F04F7F01EEB15F9004FA84E /* CoreLocation.framework */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
@@ -153,6 +154,7 @@
 		0F04F7CE1EE9DD1A004FA84E /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
 		0F04F7CF1EE9DD1A004FA84E /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
 		0F04F7D01EE9DD1A004FA84E /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		0F04F7F01EEB15F9004FA84E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F04F7F11EEB15F9004FA84E /* CoreLocation.framework in Frameworks */,
 				0F04F7731EE702E9004FA84E /* LocalAuthentication.framework in Frameworks */,
 				1EA083CE8FD9342F2B121C27 /* Pods_TravelBucket.framework in Frameworks */,
 			);
@@ -320,6 +323,7 @@
 		28B8C462632FD827227C6A22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F04F7F01EEB15F9004FA84E /* CoreLocation.framework */,
 				0F04F7721EE702E9004FA84E /* LocalAuthentication.framework */,
 				114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */,
 			);

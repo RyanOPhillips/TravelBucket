@@ -7,23 +7,53 @@
 //
 
 import UIKit
+import CoreLocation
 import GoogleMaps
 
-class MapViewController: UIViewController {
+
+class MapViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var center = CLLocationCoordinate2D()
+    let manager = CLLocationManager()
+    var camera = GMSCameraPosition()
+    var mapView = GMSMapView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
 
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 1.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        
+        
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
+        mapView.isMyLocationEnabled = true
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        mapView.animate(to: camera)
         
+        
+        if let mylocation = mapView.myLocation {
+            print("User's location: \(mylocation)")
+        } else {
+            print("User's location is unknown")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        
+        let userLocation = locations.last
+        center = CLLocationCoordinate2D(latitude: (userLocation?.coordinate.latitude)!, longitude: (userLocation?.coordinate.longitude)!)
+        
+        camera = GMSCameraPosition.camera(withLatitude: center.latitude, longitude: center.longitude, zoom: 1.0)
+        
+        mapView.animate(to: camera)
+        
+        //Finally stop updating location otherwise it will come again and again in this delegate
+        manager.stopUpdatingLocation()
     }
     
 
