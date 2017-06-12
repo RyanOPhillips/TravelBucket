@@ -13,23 +13,26 @@ class ItemDetailsVCCompleted: UIViewController {
     
     @IBOutlet weak var notesField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var dateLabel: UILabel!
+    
+    var itemToEdit: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if itemToEdit != nil {
+            loadItemData()
+            
+            
+        }
     
     }
-    
 
     @IBAction func datePickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateStyle = DateFormatter.Style.long
         
-        let strDate = dateFormatter.string(from: datePicker.date)
-        dateLabel.text = strDate
+        _ = dateFormatter.string(from: datePicker.date)
     }
     
     
@@ -39,12 +42,22 @@ class ItemDetailsVCCompleted: UIViewController {
         
         let item = Item(context: context)
         
-        let notes = notesField.text
+        if let notes = notesField.text {
             item.notes = notes
+        }
+        let date = datePicker.date
+            item.date = date as NSDate
         
-        
-        
+        ad.saveContext()
+        navigationController?.popViewController(animated: true)
     }
     
- 
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            notesField.text = item.notes
+            datePicker.date = item.date! as Date
+        }
+        
+    }
 }

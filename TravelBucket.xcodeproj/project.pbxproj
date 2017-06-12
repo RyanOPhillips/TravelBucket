@@ -54,6 +54,7 @@
 		0F04F80D1EEEE8AC004FA84E /* ruthie-163318.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F80C1EEEE8AC004FA84E /* ruthie-163318.jpg */; };
 		0F04F80F1EEEE8B6004FA84E /* stephen-monroe-85429.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F80E1EEEE8B6004FA84E /* stephen-monroe-85429.jpg */; };
 		0F04F8111EEEF5A5004FA84E /* ExpandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F8101EEEF5A5004FA84E /* ExpandedViewController.swift */; };
+		0F04F8151EEF0C0D004FA84E /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F8141EEF0C0D004FA84E /* photo.png */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
@@ -173,6 +174,7 @@
 		0F04F80C1EEEE8AC004FA84E /* ruthie-163318.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ruthie-163318.jpg"; path = "../../../Downloads/ruthie-163318.jpg"; sourceTree = "<group>"; };
 		0F04F80E1EEEE8B6004FA84E /* stephen-monroe-85429.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "stephen-monroe-85429.jpg"; path = "../../../Downloads/stephen-monroe-85429.jpg"; sourceTree = "<group>"; };
 		0F04F8101EEEF5A5004FA84E /* ExpandedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedViewController.swift; sourceTree = "<group>"; };
+		0F04F8141EEF0C0D004FA84E /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo.png; path = ../../../Desktop/photo.png; sourceTree = "<group>"; };
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		0F04F7861EE85DDA004FA84E /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				0F04F8141EEF0C0D004FA84E /* photo.png */,
 				0F04F8061EEEE882004FA84E /* andrew-neel-133200.jpg */,
 				0F04F8021EEDCB81004FA84E /* kerrie-defelice-43120.jpg */,
 				0F04F8081EEEE889004FA84E /* dennis-kummer-171041.jpg */,
@@ -496,6 +499,7 @@
 				0F04F7D41EE9DD1A004FA84E /* Icon-App-20x20@3x.png in Resources */,
 				0F04F7DE1EE9DD1A004FA84E /* Icon-App-60x60@2x.png in Resources */,
 				0F04F7E11EE9DD1A004FA84E /* Icon-App-72x72@2x.png in Resources */,
+				0F04F8151EEF0C0D004FA84E /* photo.png in Resources */,
 				0FCFBA671EE0802200498C77 /* LaunchScreen.storyboard in Resources */,
 				0F04F7E61EE9DD1A004FA84E /* Icon-Small-50x50@1x.png in Resources */,
 				0F04F7901EE864F7004FA84E /* DSC_0180.jpg in Resources */,
