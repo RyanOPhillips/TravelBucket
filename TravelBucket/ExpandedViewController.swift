@@ -1,14 +1,14 @@
 //
-//  MenuViewController.swift
+//  ExpandedViewController.swift
 //  TravelBucket
 //
-//  Created by Ryan Phillips on 6/6/17.
+//  Created by Ryan Phillips on 6/12/17.
 //  Copyright © 2017 Ryan Phillips. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class ExpandedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,30 +11,40 @@ import UIKit
 class ItemDetailsVCCompleted: UIViewController {
 
     
-//    @IBOutlet weak var notesField: UITextField!
-    
+    @IBOutlet weak var notesField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        if let topItem = self.navigationController?.navigationBar.topItem {
-            topItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
-        }
-
-        // Do any additional setup after loading the view.
+    
     }
     
-//    @IBAction func savePressed(_ sender: UIButton) {
-//        
-//        let item = Item(context: context)
-//        
-//        
-//        
-//    }
+
+    @IBAction func datePickerChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.long
+        
+        let strDate = dateFormatter.string(from: datePicker.date)
+        dateLabel.text = strDate
+    }
     
     
     
     
+    @IBAction func savePressed(_ sender: UIButton) {
+        
+        let item = Item(context: context)
+        
+        let notes = notesField.text
+            item.notes = notes
+        
+        
+        
+    }
     
+ 
 }
