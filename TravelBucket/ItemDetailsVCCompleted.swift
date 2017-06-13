@@ -78,23 +78,19 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
     
     @IBAction func savePressed(_ sender: UIButton) {
         
-        var item = Item()
-        let image = Image()
+        var item: Item!
         
         let picture = Image(context: context)
         picture.image = thumbImage.image
-        
-            image.image = picture
         
         if itemToEdit == nil {
             item = Item(context: context)
         } else {
             
             item = itemToEdit!
-            
         }
         
-        
+         item.toImage = picture
         
         if let notes = notesField.text {
             item.notes = notes
@@ -120,6 +116,8 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
         if let item = itemToEdit {
             notesField.text = item.notes
             datePicker.date = item.date! as Date
+            
+            thumbImage.image = item.toImage?.image as? UIImage
         }
         
     }

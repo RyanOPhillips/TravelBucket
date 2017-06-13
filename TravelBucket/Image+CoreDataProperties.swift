@@ -2,7 +2,7 @@
 //  Image+CoreDataProperties.swift
 //  TravelBucket
 //
-//  Created by Ryan Phillips on 6/6/17.
+//  Created by Ryan Phillips on 6/13/17.
 //  Copyright © 2017 Ryan Phillips. All rights reserved.
 //
 
