@@ -23,7 +23,22 @@ class ExpandedViewController: UIViewController {
         if itemToEdit != nil {
             loadItemData()
             
+            var dateFromString = ""
             
+            if itemToEdit?.date != nil {
+                
+                
+                let date = itemToEdit?.date
+                let formatter = DateFormatter()
+                formatter.dateFormat = "MMMM dd, yyyy"
+                dateFromString = formatter.string(from: date! as Date)
+                
+            }else{
+                
+                dateFromString = "Haven't Been Here Yet"
+            }
+            
+            datePicker.text = dateFromString
         }
     }
     

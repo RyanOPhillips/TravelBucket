@@ -30,7 +30,6 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
         imagePicker.delegate = self
         
         
-        
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {
@@ -73,6 +72,8 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
         UIView.commitAnimations()
     }
+    
+    
     
     
     

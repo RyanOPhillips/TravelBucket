@@ -23,6 +23,7 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         generateTestData()
         attemptFetch()
+        
 
         // Do any additional setup after loading the view.
     }
