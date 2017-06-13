@@ -208,21 +208,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47l-zd-AMU">
-                                <rect key="frame" x="16" y="84" width="343" height="583"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="583" id="609-a2-vAP"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="UEZ-Cm-mpX" customClass="ItemCell" customModule="TravelBucket" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="150"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEZ-Cm-mpX" id="8JM-FP-YhA">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-br-6zf">
-                                                    <rect key="frame" x="8" y="8" width="327" height="134"/>
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="134"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC_0180.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Xo-TW-ziM">
                                                             <rect key="frame" x="8" y="17" width="100" height="100"/>
@@ -232,7 +232,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Wall of China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAi-YP-LNG">
-                                                            <rect key="frame" x="116" y="28" width="203" height="21"/>
+                                                            <rect key="frame" x="116" y="28" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="kcT-j6-uW5"/>
                                                             </constraints>
@@ -241,7 +241,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 13, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT0-9y-Moc">
-                                                            <rect key="frame" x="116" y="57" width="203" height="21"/>
+                                                            <rect key="frame" x="116" y="57" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="bzC-pt-YPE"/>
                                                             </constraints>
@@ -250,7 +250,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beijing, China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pQ-gX-Pck">
-                                                            <rect key="frame" x="116" y="86" width="203" height="21"/>
+                                                            <rect key="frame" x="116" y="86" width="251" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="bg7-Bc-meb"/>
                                                             </constraints>
@@ -278,12 +278,13 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="H9q-br-6zf" secondAttribute="trailing" constant="8" id="3RK-DQ-ibm"/>
                                                 <constraint firstAttribute="bottom" secondItem="H9q-br-6zf" secondAttribute="bottom" constant="8" id="6vE-oY-aj6"/>
                                                 <constraint firstItem="H9q-br-6zf" firstAttribute="top" secondItem="8JM-FP-YhA" secondAttribute="top" constant="8" id="Luv-AJ-QTA"/>
-                                                <constraint firstItem="H9q-br-6zf" firstAttribute="leading" secondItem="8JM-FP-YhA" secondAttribute="leading" constant="8" id="wD9-0X-6fB"/>
+                                                <constraint firstItem="H9q-br-6zf" firstAttribute="leading" secondItem="8JM-FP-YhA" secondAttribute="leading" id="VLR-nS-1zS"/>
+                                                <constraint firstAttribute="trailing" secondItem="H9q-br-6zf" secondAttribute="trailing" id="pVM-EN-XRS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="cityLocation" destination="0pQ-gX-Pck" id="AIz-aR-Mwv"/>
                                             <outlet property="itemDate" destination="BT0-9y-Moc" id="AQD-Ov-5mF"/>
@@ -294,12 +295,12 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n0l-rA-ieX" firstAttribute="top" secondItem="47l-zd-AMU" secondAttribute="bottom" id="Qkx-cQ-f1v"/>
-                            <constraint firstItem="47l-zd-AMU" firstAttribute="trailing" secondItem="2T0-j4-4nf" secondAttribute="trailingMargin" id="edK-eX-1V0"/>
                             <constraint firstItem="47l-zd-AMU" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" constant="20" id="ep0-lW-qUn"/>
-                            <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leadingMargin" id="fbV-WN-sTE"/>
+                            <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leading" id="iTL-nQ-IIy"/>
+                            <constraint firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="wGc-hM-EKK"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
@@ -496,8 +497,8 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwo-Ng-QWT">
                                 <rect key="frame" x="16.5" y="73.5" width="343" height="175"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Add Photo Here"/>
                                 <connections>
                                     <action selector="addImage:" destination="2Zf-1d-eta" eventType="touchUpInside" id="M9o-Ox-oEr"/>
                                 </connections>
