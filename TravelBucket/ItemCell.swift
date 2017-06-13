@@ -20,6 +20,7 @@ class ItemCell: UITableViewCell {
         name.text = item.name
         itemDate.text = "\(item.date!)"
         cityLocation.text = ""
+        thumb.image = item.toImage?.image as? UIImage
     }
     
     //Add Google Places API Here

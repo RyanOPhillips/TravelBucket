@@ -10,9 +10,7 @@
 		0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */; };
 		0F04F7731EE702E9004FA84E /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F04F7721EE702E9004FA84E /* LocalAuthentication.framework */; };
 		0F04F7781EE74493004FA84E /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7741EE74493004FA84E /* Item+CoreDataClass.swift */; };
-		0F04F7791EE74493004FA84E /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */; };
 		0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */; };
-		0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */; };
 		0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F77E1EE75415004FA84E /* MenuViewController.swift */; };
 		0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7801EE75C82004FA84E /* MapViewController.swift */; };
 		0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F7821EE79F97004FA84E /* MaterialView.swift */; };
@@ -59,6 +57,8 @@
 		0F04F81F1EEFA40D004FA84E /* jorge-gascon-23288.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F81E1EEFA40D004FA84E /* jorge-gascon-23288.jpg */; };
 		0F3B4E3C1EE1D0BF00BDC50A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */; };
 		0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */; };
+		0F6B8D891EF0577D004AF681 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B8D871EF0577D004AF681 /* Image+CoreDataProperties.swift */; };
+		0F6B8D8A1EF0577D004AF681 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B8D881EF0577D004AF681 /* Item+CoreDataProperties.swift */; };
 		0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA591EE0802200498C77 /* AppDelegate.swift */; };
 		0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */; };
 		0FCFBA5F1EE0802200498C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA5D1EE0802200498C77 /* Main.storyboard */; };
@@ -132,9 +132,7 @@
 		0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineButton.swift; sourceTree = "<group>"; };
 		0F04F7721EE702E9004FA84E /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		0F04F7741EE74493004FA84E /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0F04F7761EE74493004FA84E /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0F04F77E1EE75415004FA84E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0F04F7801EE75C82004FA84E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0F04F7821EE79F97004FA84E /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
@@ -182,6 +180,8 @@
 		0F1EC14D1EE0B117002098CE /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		0F3B4E3B1EE1D0BF00BDC50A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BucketListViewController.swift; sourceTree = "<group>"; };
+		0F6B8D871EF0577D004AF681 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0F6B8D881EF0577D004AF681 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0FCFBA561EE0802200498C77 /* TravelBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCFBA591EE0802200498C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -248,8 +248,8 @@
 		0F04F77D1EE744E9004FA84E /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				0F04F7751EE74493004FA84E /* Item+CoreDataProperties.swift */,
-				0F04F7771EE74493004FA84E /* Image+CoreDataProperties.swift */,
+				0F6B8D871EF0577D004AF681 /* Image+CoreDataProperties.swift */,
+				0F6B8D881EF0577D004AF681 /* Item+CoreDataProperties.swift */,
 			);
 			name = Generated;
 			sourceTree = "<group>";
@@ -595,18 +595,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */,
-				0F04F77B1EE74493004FA84E /* Image+CoreDataProperties.swift in Sources */,
 				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
 				0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */,
 				0F04F79B1EE8677D004FA84E /* ItemCell.swift in Sources */,
 				0F04F7811EE75C82004FA84E /* MapViewController.swift in Sources */,
 				0F04F77F1EE75415004FA84E /* MenuViewController.swift in Sources */,
+				0F6B8D8A1EF0577D004AF681 /* Item+CoreDataProperties.swift in Sources */,
 				0F04F76F1EE5FF70004FA84E /* RoundedOutlineButton.swift in Sources */,
 				0F04F8051EEDD098004FA84E /* ResizedMenuButtons.swift in Sources */,
 				0F04F8111EEEF5A5004FA84E /* ExpandedViewController.swift in Sources */,
-				0F04F7791EE74493004FA84E /* Item+CoreDataProperties.swift in Sources */,
 				0F04F7B61EE9C09F004FA84E /* ItemDetailsVCNew.swift in Sources */,
 				0F04F7AB1EE8E448004FA84E /* ItemDetailsVCCompleted.swift in Sources */,
+				0F6B8D891EF0577D004AF681 /* Image+CoreDataProperties.swift in Sources */,
 				0FCFBA621EE0802200498C77 /* TravelBucket.xcdatamodeld in Sources */,
 				0FCFBA5A1EE0802200498C77 /* AppDelegate.swift in Sources */,
 				0F3B4E441EE1E46D00BDC50A /* BucketListViewController.swift in Sources */,
