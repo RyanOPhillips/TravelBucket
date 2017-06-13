@@ -79,10 +79,12 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
     @IBAction func savePressed(_ sender: UIButton) {
         
         var item = Item()
+        let image = Image()
+        
         let picture = Image(context: context)
         picture.image = thumbImage.image
         
-        item.toImage = picture
+            image.image = picture
         
         if itemToEdit == nil {
             item = Item(context: context)
