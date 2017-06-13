@@ -10,6 +10,7 @@ import UIKit
 
 class ExpandedViewController: UIViewController {
     
+    @IBOutlet weak var thumbImage: UIImageView!
     @IBOutlet weak var notesField: UITextView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var datePicker: UILabel!
@@ -45,6 +46,9 @@ class ExpandedViewController: UIViewController {
         if let item = itemToEdit {
             notesField.text = item.notes
             datePicker.text = "\(item.date!)"
+            thumbImage.image = item.toImage?.image as? UIImage
+            
+            
         }
     }
 }
