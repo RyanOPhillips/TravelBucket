@@ -395,6 +395,7 @@
                         <outlet property="datePicker" destination="eIl-W1-CYw" id="Kua-mg-3mM"/>
                         <outlet property="locationLabel" destination="EZR-WH-YK5" id="iwO-1q-MVb"/>
                         <outlet property="notesField" destination="g8e-ZW-WM5" id="iTo-rP-ATi"/>
+                        <outlet property="thumbImage" destination="tg5-WV-Yre" id="oBG-Zk-5AS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzo-vg-NVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -495,6 +496,8 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwo-Ng-QWT">
                                 <rect key="frame" x="16.5" y="73.5" width="343" height="175"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Add Photo Here"/>
                                 <connections>
                                     <action selector="addImage:" destination="2Zf-1d-eta" eventType="touchUpInside" id="M9o-Ox-oEr"/>
                                 </connections>
@@ -555,7 +558,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
