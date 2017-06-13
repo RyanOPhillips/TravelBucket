@@ -63,7 +63,7 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ExpandedViewControlelr" {
+        if segue.identifier == "ExpandedViewController" {
             if let destination = segue.destination as? ExpandedViewController {
                 if let item = sender as? Item{
                     destination.itemToEdit = item

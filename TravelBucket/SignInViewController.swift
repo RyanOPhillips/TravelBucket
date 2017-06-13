@@ -11,13 +11,27 @@ import LocalAuthentication
 
 class SignInViewController: UIViewController {
     
-//    @IBOutlet weak var loginWebView: UIWebView!
+    //    @IBOutlet weak var loginWebView: UIWebView!
     @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       loginIndicator.startAnimating()
+        loginIndicator.startAnimating()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     @IBAction func useTouchIDButtonWasPressed(_ sender: Any) {
@@ -36,7 +50,7 @@ class SignInViewController: UIViewController {
                 }
             })
             
-//            Code for Touch ID, Navigating to Next Page, Handling Errors
+            //            Code for Touch ID, Navigating to Next Page, Handling Errors
         }else{
             showAlertViewForNoBiometrics()
             return
@@ -84,7 +98,7 @@ class SignInViewController: UIViewController {
         }
         return message
     }
-
+    
     func navigateToAuthenticatedVc(){
         
         if let loggedInVC = storyboard?.instantiateViewController(withIdentifier: "LoggedInVC"){
