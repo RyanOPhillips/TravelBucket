@@ -74,9 +74,6 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
     }
     
     
-    
-    
-    
     @IBAction func savePressed(_ sender: UIButton) {
         
         var item: Item!
