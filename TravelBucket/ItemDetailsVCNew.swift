@@ -11,20 +11,24 @@ import GooglePlaces
 
 class ItemDetailsVCNew: UIViewController {
     
+    @IBOutlet weak var newNameField: UITextField!
+    @IBOutlet weak var newLocationField: UITextField!
+    @IBOutlet var setLocationTapped: [UIButton]!
+    
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         resultsViewController = GMSAutocompleteResultsViewController()
-        resultsViewController?.delegate = self as! GMSAutocompleteResultsViewControllerDelegate
+        resultsViewController?.delegate = self as GMSAutocompleteResultsViewControllerDelegate
         
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
         
-        let subView = UIView(frame: CGRect(x: 0, y: 65.0, width: 350.0, height: 45.0))
+        let subView = UIView(frame: CGRect(x: 0, y: 65.0, width: 375.0, height: 45.0))
         
         subView.addSubview((searchController?.searchBar)!)
         view.addSubview(subView)
@@ -40,14 +44,12 @@ class ItemDetailsVCNew: UIViewController {
 }
 
 // Handle the user's selection.
-    extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
+extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
-        // Do something with the selected place.
-        print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
+        
+        //        Item.lat = place.coordinate.latitude
         
     }
     
@@ -66,7 +68,41 @@ class ItemDetailsVCNew: UIViewController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
+    func moveTextField(_ textField: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
         
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveTextField(textField, moveDistance: -250, up: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        moveTextField(textField, moveDistance: -250, up: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            // ...
+        }
+        super.touchesBegan(touches, with: event)
+    }
+    
+   
+    
+    
+    
 }
 
 
