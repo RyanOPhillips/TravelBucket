@@ -420,6 +420,10 @@
                                 <state key="normal" title="Set Location">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="WkL-bt-t3e" eventType="touchUpInside" id="dNt-YE-Xiy"/>
+                                    <action selector="saveLocationTapped:" destination="WkL-bt-t3e" eventType="touchUpInside" id="uOT-IZ-XcK"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Item Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzn-t5-1w3">
                                 <rect key="frame" x="16" y="248" width="343" height="50"/>
@@ -469,7 +473,6 @@
                         <outlet property="newLocationField" destination="vP6-00-7Fb" id="WkQ-uZ-a2Q"/>
                         <outlet property="newNameField" destination="qzn-t5-1w3" id="cJj-vL-vQZ"/>
                         <outlet property="placeThumb" destination="gUc-Dk-b7C" id="h8s-se-P6T"/>
-                        <outletCollection property="setLocationTapped" destination="iTm-ST-5kq" collectionClass="NSMutableArray" id="m7L-WV-x7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpB-CK-Bpi" userLabel="First Responder" sceneMemberID="firstResponder"/>

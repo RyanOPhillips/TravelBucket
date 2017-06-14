@@ -14,12 +14,15 @@ class ItemDetailsVCNew: UIViewController {
     @IBOutlet weak var placeThumb: UIImageView!
     @IBOutlet weak var newNameField: UITextField!
     @IBOutlet weak var newLocationField: UITextField!
-    @IBOutlet var setLocationTapped: [UIButton]!
     
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
+    //    var addressComponents = GMSAddressComponent?.self
     
+    
+    @IBAction func saveLocationTapped(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,17 +53,55 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
         
-        newNameField.text = place.name
-    
-//        newLocationField.text = place.addressComponents
+        var city = String()
+        var state = String()
+        var country = String()
         
-        print(place)
+        for component in place.addressComponents! {
+            
+            if component.type == "locality" {
+                
+                newNameField.text = place.name
+                city = component.name
+                
+            }
+            
+            if component.type == "administrative_area_level_1" {
+                
+                newNameField.text = place.name
+                state = component.name
+            }
+            
+            if component.type == "country" {
+                
+                newNameField.text = place.name
+                country = component.name
+            }
+            
+        }
         
-//        let placeName = place.name
-//        let placeAddress = place.addressComponents
-//        let placeLat = place.coordinate.latitude
-//        let placeLong = place.coordinate.longitude
+        var outputArray = [String]()
         
+        if !city.isEmpty {
+            
+            outputArray.append(city)
+        }
+        
+        if !state.isEmpty {
+            
+            outputArray.append(state)
+        }
+        
+        if !country.isEmpty {
+            
+            outputArray.append(country)
+        }
+        
+        let outputString: String = outputArray.joined(separator: ", ")
+        
+        print(outputString)
+        
+        newLocationField.text = outputString
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
@@ -110,7 +151,6 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
     }
     
    
-    
     
     
 }
