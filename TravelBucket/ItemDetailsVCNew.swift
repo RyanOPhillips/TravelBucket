@@ -11,6 +11,7 @@ import GooglePlaces
 
 class ItemDetailsVCNew: UIViewController {
     
+    @IBOutlet weak var placeThumb: UIImageView!
     @IBOutlet weak var newNameField: UITextField!
     @IBOutlet weak var newLocationField: UITextField!
     @IBOutlet var setLocationTapped: [UIButton]!
@@ -49,7 +50,16 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
         
-        //        Item.lat = place.coordinate.latitude
+        newNameField.text = place.name
+    
+//        newLocationField.text = place.addressComponents
+        
+        print(place)
+        
+//        let placeName = place.name
+//        let placeAddress = place.addressComponents
+//        let placeLat = place.coordinate.latitude
+//        let placeLong = place.coordinate.longitude
         
     }
     

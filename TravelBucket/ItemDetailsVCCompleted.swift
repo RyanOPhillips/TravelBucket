@@ -114,7 +114,6 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
         if let item = itemToEdit {
             notesField.text = item.notes
             datePicker.date = item.date! as Date
-            
             thumbImage.image = item.toImage?.image as? UIImage
         }
         
@@ -144,6 +143,8 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let img = info[UIImagePickerControllerOriginalImage] as? UIImage{
             thumbImage.image = img
+        }else{
+            
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
