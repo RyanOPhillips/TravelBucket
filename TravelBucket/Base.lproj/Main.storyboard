@@ -225,16 +225,6 @@
                                                                 <constraint firstAttribute="height" constant="100" id="RGf-jm-ovI"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Wall of China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAi-YP-LNG">
-                                                            <rect key="frame" x="116" y="28" width="251" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="kcT-j6-uW5"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <size key="shadowOffset" width="1" height="1"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 13, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT0-9y-Moc">
                                                             <rect key="frame" x="116" y="57" width="251" height="21"/>
                                                             <constraints>
@@ -253,17 +243,27 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great Wall of China" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAi-YP-LNG">
+                                                            <rect key="frame" x="116" y="26" width="251" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="kcT-j6-uW5"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="1" height="1"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="3Xo-TW-ziM" firstAttribute="leading" secondItem="H9q-br-6zf" secondAttribute="leading" constant="8" id="2Aj-or-8Se"/>
                                                         <constraint firstAttribute="trailing" secondItem="SAi-YP-LNG" secondAttribute="trailing" constant="8" id="FKE-3V-287"/>
-                                                        <constraint firstItem="SAi-YP-LNG" firstAttribute="top" secondItem="H9q-br-6zf" secondAttribute="top" constant="28" id="Lpb-QN-64x"/>
+                                                        <constraint firstItem="SAi-YP-LNG" firstAttribute="top" secondItem="H9q-br-6zf" secondAttribute="top" constant="26" id="Lpb-QN-64x"/>
                                                         <constraint firstAttribute="trailing" secondItem="0pQ-gX-Pck" secondAttribute="trailing" constant="8" id="UrA-sE-pHR"/>
                                                         <constraint firstItem="0pQ-gX-Pck" firstAttribute="leading" secondItem="3Xo-TW-ziM" secondAttribute="trailing" constant="8" id="VeD-wv-EHr"/>
                                                         <constraint firstAttribute="trailing" secondItem="BT0-9y-Moc" secondAttribute="trailing" constant="8" id="WWy-eE-JKM"/>
                                                         <constraint firstItem="3Xo-TW-ziM" firstAttribute="centerY" secondItem="H9q-br-6zf" secondAttribute="centerY" id="dva-DF-sPZ"/>
-                                                        <constraint firstItem="BT0-9y-Moc" firstAttribute="top" secondItem="SAi-YP-LNG" secondAttribute="bottom" constant="8" id="i32-aJ-0S6"/>
+                                                        <constraint firstItem="BT0-9y-Moc" firstAttribute="top" secondItem="SAi-YP-LNG" secondAttribute="bottom" constant="1" id="i32-aJ-0S6"/>
                                                         <constraint firstAttribute="bottom" secondItem="0pQ-gX-Pck" secondAttribute="bottom" constant="27" id="ozt-gc-MU7"/>
                                                         <constraint firstItem="SAi-YP-LNG" firstAttribute="leading" secondItem="3Xo-TW-ziM" secondAttribute="trailing" constant="8" id="t0K-Ce-OVz"/>
                                                         <constraint firstItem="0pQ-gX-Pck" firstAttribute="top" secondItem="BT0-9y-Moc" secondAttribute="bottom" constant="8" id="xBG-tE-bSB"/>
@@ -421,14 +421,14 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzn-t5-1w3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Item Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzn-t5-1w3">
                                 <rect key="frame" x="16" y="141" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hax-St-4KS"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Location Above" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vP6-00-7Fb">
                                 <rect key="frame" x="16" y="222" width="343" height="50"/>
@@ -564,7 +564,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
