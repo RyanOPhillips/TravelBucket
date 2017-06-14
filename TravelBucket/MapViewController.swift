@@ -17,6 +17,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     var camera = GMSCameraPosition()
     var mapView = GMSMapView()
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
