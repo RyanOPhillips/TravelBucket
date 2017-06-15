@@ -78,6 +78,16 @@ class ExpandedViewController: UIViewController {
                 
             }
             
+            if item.location == nil {
+                
+                print("Haven't Been Here Yet")
+                
+            } else {
+                
+                locationLabel.text = item.location
+                
+            }
+            
             if item.date == nil {
                 
                 print("Haven't Been Here Yet")
