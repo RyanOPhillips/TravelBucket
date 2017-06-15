@@ -32,10 +32,18 @@ class ItemCell: UITableViewCell {
             dateFromString = "Haven't Been Here Yet"
         }
         
+        if item.toImage == nil {
+            
+            thumb.image = UIImage(named: "photo.png")
+            
+        } else {
+            
+            thumb.image = item.toImage?.image as? UIImage
+            
+        }
         name.text = item.name
         itemDate.text = dateFromString
         cityLocation.text = item.location
-        thumb.image = 
     }
     
     
