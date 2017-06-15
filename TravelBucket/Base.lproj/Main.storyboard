@@ -421,7 +421,6 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveButtonTapped:" destination="WkL-bt-t3e" eventType="touchUpInside" id="dNt-YE-Xiy"/>
                                     <action selector="saveLocationTapped:" destination="WkL-bt-t3e" eventType="touchUpInside" id="uOT-IZ-XcK"/>
                                 </connections>
                             </button>

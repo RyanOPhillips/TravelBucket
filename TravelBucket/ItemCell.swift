@@ -34,8 +34,8 @@ class ItemCell: UITableViewCell {
         
         name.text = item.name
         itemDate.text = dateFromString
-        cityLocation.text = ""
-        thumb.image = item.toImage?.image as? UIImage
+        cityLocation.text = item.location
+        thumb.image = 
     }
     
     

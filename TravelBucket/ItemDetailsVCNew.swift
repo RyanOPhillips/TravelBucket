@@ -11,18 +11,44 @@ import GooglePlaces
 
 class ItemDetailsVCNew: UIViewController {
     
-    @IBOutlet weak var placeThumb: UIImageView!
+    @IBOutlet weak var placeThumb: UIImageView?
     @IBOutlet weak var newNameField: UITextField!
     @IBOutlet weak var newLocationField: UITextField!
     
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
-    //    var addressComponents = GMSAddressComponent?.self
     
     
     @IBAction func saveLocationTapped(_ sender: UIButton) {
+        
+        let item = Item(context: context)
+        let image = Image(context: context)
+        
+        if let name = newNameField.text {
+            
+            item.name = name
+        }
+        
+        if let location = newLocationField.text {
+            
+            item.location = location
+        }
+        
+        if let picture = placeThumb?.image {
+            
+            
+            image.image = picture
+            
+        }
+        
+        ad.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -99,9 +125,11 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
         
         let outputString: String = outputArray.joined(separator: ", ")
         
-        print(outputString)
-        
         newLocationField.text = outputString
+        
+        ad.saveContext()
+        
+        
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,

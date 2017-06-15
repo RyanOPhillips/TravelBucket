@@ -88,7 +88,7 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
             item = itemToEdit!
         }
         
-         item.toImage = picture
+        item.toImage = picture
         
         if let notes = notesField.text {
             item.notes = notes
@@ -112,9 +112,36 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
     func loadItemData() {
         
         if let item = itemToEdit {
-            notesField.text = item.notes
-            datePicker.date = item.date! as Date
-            thumbImage.image = item.toImage?.image as? UIImage
+            
+            if item.notes == nil {
+                
+                print("No Notes Yet")
+                
+            } else {
+                
+                notesField.text = item.notes
+                
+            }
+            
+            if item.date == nil {
+                
+                print("Haven't Been Here Yet")
+                
+            } else {
+                
+                datePicker.date = item.date! as Date
+                
+            }
+            
+            if item.toImage == nil {
+                
+                thumbImage.image = UIImage(named: "photo.png")
+                
+            } else {
+                
+                thumbImage.image = item.toImage?.image as? UIImage
+                
+            }
         }
         
     }
@@ -131,7 +158,7 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
             if aViewController.isKind(of: BucketListViewController.self) {
                 _ = self.navigationController?.popToViewController(aViewController, animated: true)
             }
-   
+            
         }
         
     }

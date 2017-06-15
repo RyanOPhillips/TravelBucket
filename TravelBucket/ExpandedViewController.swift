@@ -50,7 +50,7 @@ class ExpandedViewController: UIViewController {
         }
     }
     
-  
+    
     @IBAction func editButton(_ sender: Any) {
         let item = itemToEdit
         performSegue(withIdentifier: "ItemDetailsVCCompleted", sender: item)
@@ -59,7 +59,7 @@ class ExpandedViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ItemDetailsVCCompleted" {
             if let destination = segue.destination as? ItemDetailsVCCompleted {
-                    destination.itemToEdit = itemToEdit
+                destination.itemToEdit = itemToEdit
             }
         }
     }
@@ -67,11 +67,36 @@ class ExpandedViewController: UIViewController {
     func loadItemData() {
         
         if let item = itemToEdit {
-            notesField.text = item.notes
-            datePicker.text = "\(item.date!)"
-            thumbImage.image = item.toImage?.image as? UIImage
             
+            if item.notes == nil {
+                
+                print("No Notes Yet")
+                
+            } else {
+                
+                notesField.text = item.notes
+                
+            }
             
+            if item.date == nil {
+                
+                print("Haven't Been Here Yet")
+                
+            } else {
+                
+                datePicker.text = "\(item.date!)"
+                
+            }
+            
+            if item.toImage == nil {
+                
+                thumbImage.image = UIImage(named: "photo.png")
+                
+            } else {
+                
+                thumbImage.image = item.toImage?.image as? UIImage
+                
+            }
         }
     }
     

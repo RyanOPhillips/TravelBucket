@@ -224,12 +224,12 @@
 			isa = PBXGroup;
 			children = (
 				0FCFBA5B1EE0802200498C77 /* SignInViewController.swift */,
-				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
 				0F04F77E1EE75415004FA84E /* MenuViewController.swift */,
-				0F04F7801EE75C82004FA84E /* MapViewController.swift */,
-				0F04F7AA1EE8E448004FA84E /* ItemDetailsVCCompleted.swift */,
-				0F04F7B51EE9C09F004FA84E /* ItemDetailsVCNew.swift */,
+				0F3B4E431EE1E46D00BDC50A /* BucketListViewController.swift */,
 				0F04F8101EEEF5A5004FA84E /* ExpandedViewController.swift */,
+				0F04F7B51EE9C09F004FA84E /* ItemDetailsVCNew.swift */,
+				0F04F7AA1EE8E448004FA84E /* ItemDetailsVCCompleted.swift */,
+				0F04F7801EE75C82004FA84E /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
