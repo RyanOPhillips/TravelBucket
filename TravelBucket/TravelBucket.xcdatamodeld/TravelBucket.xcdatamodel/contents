@@ -7,6 +7,7 @@
     <entity name="Item" representedClassName=".Item" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="long" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,6 +15,6 @@
     </entity>
     <elements>
         <element name="Image" positionX="-27" positionY="278" width="128" height="73"/>
-        <element name="Item" positionX="-272" positionY="203" width="128" height="135"/>
+        <element name="Item" positionX="-272" positionY="203" width="128" height="150"/>
     </elements>
 </model>
