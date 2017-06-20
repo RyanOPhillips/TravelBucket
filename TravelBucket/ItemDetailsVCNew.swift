@@ -19,6 +19,9 @@ class ItemDetailsVCNew: UIViewController {
     var searchController: UISearchController?
     var resultView: UITextView?
     
+    var lat: Double?
+    var long: Double?
+    
     
     @IBAction func saveLocationTapped(_ sender: UIButton) {
         
@@ -39,6 +42,18 @@ class ItemDetailsVCNew: UIViewController {
             
             
             image.image = picture
+            
+        }
+        
+        if lat != nil {
+            
+            item.lat = lat!
+            
+        }
+        
+        if long != nil {
+            
+            item.long = long!
             
         }
         
@@ -75,6 +90,7 @@ class ItemDetailsVCNew: UIViewController {
 
 // Handle the user's selection.
 extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
+    
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
@@ -82,6 +98,7 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
         var city = String()
         var state = String()
         var country = String()
+        
         
         for component in place.addressComponents! {
             
@@ -105,6 +122,10 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
             }
             
         }
+        
+        lat = place.coordinate.latitude
+        long = place.coordinate.longitude
+        
         
         var outputArray = [String]()
         
