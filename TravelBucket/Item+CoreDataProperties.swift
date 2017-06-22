@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  TravelBucket
 //
-//  Created by Ryan Phillips on 6/14/17.
+//  Created by Ryan Phillips on 6/21/17.
 //  Copyright © 2017 Ryan Phillips. All rights reserved.
 //
 
@@ -18,10 +18,10 @@ extension Item {
 
     @NSManaged public var date: NSDate?
     @NSManaged public var lat: Double
+    @NSManaged public var location: String?
     @NSManaged public var long: Double
     @NSManaged public var name: String?
     @NSManaged public var notes: String?
-    @NSManaged public var location: String?
     @NSManaged public var toImage: Image?
 
 }

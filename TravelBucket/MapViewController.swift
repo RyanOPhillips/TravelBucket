@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
+import CoreData
 
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
@@ -17,6 +18,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     var camera = GMSCameraPosition()
     var mapView = GMSMapView()
+    
     
 
 
@@ -28,6 +30,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
 
+
         
         
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -35,7 +38,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.isMyLocationEnabled = true
         
         mapView.animate(to: camera)
+    
         
+        
+        
+        let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
+        
+        do {
+            let records = try context.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+            
+            for record: Item in records as! [Item] {
+                
+                let position = CLLocationCoordinate2D(latitude: record.lat, longitude: record.long)
+                let marker = GMSMarker(position: position)
+                marker.title = record.name
+                marker.map = mapView
+                
+                print(records)
+            }
+        
+        } catch {
+            
+            print("unable to fetch managed objects for entity")
+        }
         
         if let mylocation = mapView.myLocation {
             print("User's location: \(mylocation)")

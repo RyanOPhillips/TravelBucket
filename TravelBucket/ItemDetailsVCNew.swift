@@ -146,6 +146,8 @@ extension ItemDetailsVCNew: GMSAutocompleteResultsViewControllerDelegate {
         
         let outputString: String = outputArray.joined(separator: ", ")
         
+        print(place.coordinate)
+        
         newLocationField.text = outputString
         
         ad.saveContext()
