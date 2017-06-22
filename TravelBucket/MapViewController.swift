@@ -18,10 +18,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     var camera = GMSCameraPosition()
     var mapView = GMSMapView()
+    var storedLocations = [CLLocationCoordinate2D]()
+    var userLocation = CLLocation()
     
     
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +31,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-
-
+        
+        
         
         
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -38,13 +40,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.isMyLocationEnabled = true
         
         mapView.animate(to: camera)
-    
+        
         
         
         
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         
+        
         do {
+            
             let records = try context.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
             
             for record: Item in records as! [Item] {
@@ -54,12 +58,30 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 marker.title = record.name
                 marker.map = mapView
                 
-                print(records)
+                storedLocations.append(position)
+                
             }
-        
+            
+            for newLocation in storedLocations {
+                
+                let newerLocation = CLLocation(latitude: newLocation.latitude, longitude: newLocation.longitude)
+                
+                let distance : CLLocationDistance = userLocation.distance(from: newerLocation)
+                
+                if(distance <= 16090) {
+                    
+                    
+                    
+                    // under 1 mile
+                }
+            
+            }
+            
+            print(storedLocations)
+            
         } catch {
             
-            print("unable to fetch managed objects for entity")
+            print("Unable to fetch managed objects for entity")
         }
         
         if let mylocation = mapView.myLocation {
@@ -72,8 +94,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         
-        let userLocation = locations.last
-        center = CLLocationCoordinate2D(latitude: (userLocation?.coordinate.latitude)!, longitude: (userLocation?.coordinate.longitude)!)
+        userLocation = locations.last!
+        center = CLLocationCoordinate2D(latitude: (userLocation.coordinate.latitude), longitude: (userLocation.coordinate.longitude))
         
         camera = GMSCameraPosition.camera(withLatitude: center.latitude, longitude: center.longitude, zoom: 3.0)
         
@@ -83,5 +105,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
     }
     
-
+    
 }
