@@ -97,7 +97,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         userLocation = locations.last!
         center = CLLocationCoordinate2D(latitude: (userLocation.coordinate.latitude), longitude: (userLocation.coordinate.longitude))
         
-        camera = GMSCameraPosition.camera(withLatitude: center.latitude, longitude: center.longitude, zoom: 3.0)
+        camera = GMSCameraPosition.camera(withLatitude: center.latitude, longitude: center.longitude, zoom: 1.0)
         
         mapView.animate(to: camera)
         
