@@ -42,7 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.animate(to: camera)
         
         
-        
+        //        Setting markers on map for items on bucket list
         
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         
@@ -62,7 +62,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 
             }
             
-//            Setting distance between user's location and markers
+            //            Setting distance between user's location and markers
             
             for newLocation in storedLocations {
                 
@@ -72,9 +72,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 
                 if(distance <= 16090) {
                     
-                
+                    
                 }
-            
+                
             }
             
             print(storedLocations)

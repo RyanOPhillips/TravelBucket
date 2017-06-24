@@ -179,7 +179,7 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
     //        item6.notes = "It was very warm, but I enjoyed seeing this with my family."
     //        item6.lat = 116.5704
     //        item6.long = 40.4319
-    //        
+    //
     //        ad.saveContext()
     //        }
     
