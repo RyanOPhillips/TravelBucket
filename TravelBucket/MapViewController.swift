@@ -62,6 +62,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 
             }
             
+//            Setting distance between user's location and markers
+            
             for newLocation in storedLocations {
                 
                 let newerLocation = CLLocation(latitude: newLocation.latitude, longitude: newLocation.longitude)
@@ -70,9 +72,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 
                 if(distance <= 16090) {
                     
-                    
-                    
-                    // under 1 mile
+                
                 }
             
             }
