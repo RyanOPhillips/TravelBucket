@@ -208,17 +208,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47l-zd-AMU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="603" id="609-a2-vAP"/>
+                                    <constraint firstAttribute="height" constant="559" id="609-a2-vAP"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="UEZ-Cm-mpX" customClass="ItemCell" customModule="TravelBucket" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEZ-Cm-mpX" id="8JM-FP-YhA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-br-6zf">
@@ -296,11 +296,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Filter" translatesAutoresizingMaskIntoConstraints="NO" id="mef-GF-ODm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n0l-rA-ieX" firstAttribute="top" secondItem="47l-zd-AMU" secondAttribute="bottom" id="Qkx-cQ-f1v"/>
+                            <constraint firstItem="mef-GF-ODm" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" id="Vnu-Oa-xiN"/>
+                            <constraint firstItem="mef-GF-ODm" firstAttribute="leading" secondItem="47l-zd-AMU" secondAttribute="leading" id="Y1O-8m-3Wn"/>
                             <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leading" id="iTL-nQ-IIy"/>
+                            <constraint firstItem="mef-GF-ODm" firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="szE-lo-KSX"/>
                             <constraint firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="wGc-hM-EKK"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -637,7 +647,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
