@@ -328,6 +328,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchField" destination="mef-GF-ODm" id="h2S-gv-JVZ"/>
                         <outlet property="tableView" destination="47l-zd-AMU" id="plC-ER-ZlH"/>
                         <segue destination="1Dg-bK-XsL" kind="show" identifier="ExpandedViewController" id="Xd1-qL-FwU"/>
                     </connections>
@@ -647,7 +648,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
