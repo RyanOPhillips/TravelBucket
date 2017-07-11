@@ -27,6 +27,8 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BucketListViewController.dismissKeyboard))
         
+        
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
     }
