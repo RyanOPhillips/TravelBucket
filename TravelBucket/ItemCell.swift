@@ -18,6 +18,7 @@ class ItemCell: UITableViewCell {
     func configureCell(item: Item) {
         
         var dateFromString = ""
+        var itemArray = [String]()
         
         if item.date != nil {
             
@@ -45,7 +46,6 @@ class ItemCell: UITableViewCell {
         itemDate.text = dateFromString
         cityLocation.text = item.location
     }
-    
     
     
 }

@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 
-class BucketListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+class BucketListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchField: UISearchBar!
     
     var controller: NSFetchedResultsController<Item>!
     
@@ -21,11 +22,22 @@ class BucketListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         
-        //        generateTestData()
+        //generateTestData()
         attemptFetch()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BucketListViewController.dismissKeyboard))
         
-        // Do any additional setup after loading the view.
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    func dismissKeyboard() {
+
+        view.endEditing(true)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

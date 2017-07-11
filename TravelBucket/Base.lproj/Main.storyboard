@@ -218,7 +218,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEZ-Cm-mpX" id="8JM-FP-YhA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-br-6zf">
@@ -296,10 +296,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WhX-7d-Trg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WhX-7d-Trg" firstAttribute="leading" secondItem="47l-zd-AMU" secondAttribute="leading" id="E75-ge-rcu"/>
+                            <constraint firstItem="WhX-7d-Trg" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" id="QKh-cs-m8S"/>
                             <constraint firstItem="n0l-rA-ieX" firstAttribute="top" secondItem="47l-zd-AMU" secondAttribute="bottom" id="Qkx-cQ-f1v"/>
+                            <constraint firstItem="WhX-7d-Trg" firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="e1R-F9-AyR"/>
                             <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leading" id="iTL-nQ-IIy"/>
                             <constraint firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="wGc-hM-EKK"/>
                         </constraints>
@@ -318,6 +325,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchField" destination="WhX-7d-Trg" id="TKD-nK-mGL"/>
                         <outlet property="tableView" destination="47l-zd-AMU" id="plC-ER-ZlH"/>
                         <segue destination="1Dg-bK-XsL" kind="show" identifier="ExpandedViewController" id="Xd1-qL-FwU"/>
                     </connections>
@@ -637,7 +645,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
