@@ -218,7 +218,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEZ-Cm-mpX" id="8JM-FP-YhA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9q-br-6zf">
@@ -296,21 +296,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="Filter" translatesAutoresizingMaskIntoConstraints="NO" id="mef-GF-ODm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n0l-rA-ieX" firstAttribute="top" secondItem="47l-zd-AMU" secondAttribute="bottom" id="Qkx-cQ-f1v"/>
-                            <constraint firstItem="mef-GF-ODm" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" id="Vnu-Oa-xiN"/>
-                            <constraint firstItem="mef-GF-ODm" firstAttribute="leading" secondItem="47l-zd-AMU" secondAttribute="leading" id="Y1O-8m-3Wn"/>
                             <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leading" id="iTL-nQ-IIy"/>
-                            <constraint firstItem="mef-GF-ODm" firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="szE-lo-KSX"/>
                             <constraint firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="wGc-hM-EKK"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

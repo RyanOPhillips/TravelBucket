@@ -59,8 +59,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 marker.map = mapView
                 
                 storedLocations.append(position)
+   
                 
+                if record.toImage !== nil {
+                    
+                    marker.icon = GMSMarker.markerImage(with: .green)
+                    
+                }
             }
+            
+            
             
             //            Setting distance between user's location and markers
             
