@@ -41,7 +41,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         mapView.animate(to: camera)
         
-        
+        mapView.clear()
         //        Setting markers on map for items on bucket list
         
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
