@@ -296,21 +296,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="Filter" translatesAutoresizingMaskIntoConstraints="NO" id="mef-GF-ODm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n0l-rA-ieX" firstAttribute="top" secondItem="47l-zd-AMU" secondAttribute="bottom" id="Qkx-cQ-f1v"/>
-                            <constraint firstItem="mef-GF-ODm" firstAttribute="top" secondItem="d8e-Xi-hll" secondAttribute="bottom" id="Vnu-Oa-xiN"/>
-                            <constraint firstItem="mef-GF-ODm" firstAttribute="leading" secondItem="47l-zd-AMU" secondAttribute="leading" id="Y1O-8m-3Wn"/>
                             <constraint firstItem="47l-zd-AMU" firstAttribute="leading" secondItem="2T0-j4-4nf" secondAttribute="leading" id="iTL-nQ-IIy"/>
-                            <constraint firstItem="mef-GF-ODm" firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="szE-lo-KSX"/>
                             <constraint firstAttribute="trailing" secondItem="47l-zd-AMU" secondAttribute="trailing" id="wGc-hM-EKK"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -328,7 +318,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchField" destination="mef-GF-ODm" id="h2S-gv-JVZ"/>
                         <outlet property="tableView" destination="47l-zd-AMU" id="plC-ER-ZlH"/>
                         <segue destination="1Dg-bK-XsL" kind="show" identifier="ExpandedViewController" id="Xd1-qL-FwU"/>
                     </connections>
@@ -648,7 +637,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jj-pm-YNx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh1-gc-K6d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh1-gc-K6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
