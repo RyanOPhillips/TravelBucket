@@ -366,7 +366,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No Notes Have Been Added Yet" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g8e-ZW-WM5">
-                                <rect key="frame" x="16" y="390" width="343" height="188"/>
+                                <rect key="frame" x="16" y="413" width="343" height="165"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -395,7 +395,7 @@
                             <constraint firstItem="eIl-W1-CYw" firstAttribute="top" secondItem="tg5-WV-Yre" secondAttribute="bottom" constant="25" id="D60-dS-I8W"/>
                             <constraint firstItem="tg5-WV-Yre" firstAttribute="trailing" secondItem="QSi-0s-Nqn" secondAttribute="trailingMargin" id="SAF-2S-nlq"/>
                             <constraint firstItem="EZR-WH-YK5" firstAttribute="top" secondItem="eIl-W1-CYw" secondAttribute="bottom" constant="13.5" id="T94-zV-Ptg"/>
-                            <constraint firstItem="g8e-ZW-WM5" firstAttribute="top" secondItem="EZR-WH-YK5" secondAttribute="bottom" constant="8" id="TgO-UG-Ojz"/>
+                            <constraint firstItem="g8e-ZW-WM5" firstAttribute="top" secondItem="EZR-WH-YK5" secondAttribute="bottom" constant="31" id="TgO-UG-Ojz"/>
                             <constraint firstItem="eIl-W1-CYw" firstAttribute="trailing" secondItem="EZR-WH-YK5" secondAttribute="trailing" id="cUH-xB-Uzs"/>
                             <constraint firstItem="eIl-W1-CYw" firstAttribute="trailing" secondItem="tg5-WV-Yre" secondAttribute="trailing" id="fPH-J5-OTb"/>
                             <constraint firstItem="tg5-WV-Yre" firstAttribute="centerX" secondItem="QSi-0s-Nqn" secondAttribute="centerX" id="foT-Ek-n9l"/>
