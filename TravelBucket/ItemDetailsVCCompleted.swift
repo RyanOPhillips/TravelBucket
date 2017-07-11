@@ -29,7 +29,16 @@ class ItemDetailsVCCompleted: UIViewController, UITextFieldDelegate, UIImagePick
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemDetailsVCCompleted.dismissKeyboard))
         
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
     
     @IBAction func datePickerChanged(_ sender: Any) {

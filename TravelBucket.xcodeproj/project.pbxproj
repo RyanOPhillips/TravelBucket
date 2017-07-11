@@ -66,6 +66,7 @@
 		0FCFBA641EE0802200498C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA631EE0802200498C77 /* Assets.xcassets */; };
 		0FCFBA671EE0802200498C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA651EE0802200498C77 /* LaunchScreen.storyboard */; };
 		0FCFBA6F1EE0818F00498C77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCFBA6E1EE0818F00498C77 /* GoogleService-Info.plist */; };
+		0FF09C2F1F148958002564B5 /* SunkenOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF09C2E1F148958002564B5 /* SunkenOutline.swift */; };
 		1EA083CE8FD9342F2B121C27 /* Pods_TravelBucket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */; };
 /* End PBXBuildFile section */
 
@@ -191,6 +192,7 @@
 		0FCFBA661EE0802200498C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCFBA681EE0802200498C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCFBA6E1EE0818F00498C77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FF09C2E1F148958002564B5 /* SunkenOutline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunkenOutline.swift; sourceTree = "<group>"; };
 		114DFC83C9434BF2F6F9873E /* Pods_TravelBucket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelBucket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86D9A1A97ED038C9DD7EEF7 /* Pods-TravelBucket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelBucket.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelBucket/Pods-TravelBucket.release.xcconfig"; sourceTree = "<group>"; };
 		DE38D099C946E3A2FBBDEBB0 /* Pods-TravelBucket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelBucket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelBucket/Pods-TravelBucket.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				0F04F76E1EE5FF70004FA84E /* RoundedOutlineButton.swift */,
+				0FF09C2E1F148958002564B5 /* SunkenOutline.swift */,
 				0F04F7821EE79F97004FA84E /* MaterialView.swift */,
 				0F04F79A1EE8677D004FA84E /* ItemCell.swift */,
 				0F04F8041EEDD098004FA84E /* ResizedMenuButtons.swift */,
@@ -594,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF09C2F1F148958002564B5 /* SunkenOutline.swift in Sources */,
 				0F04F77A1EE74493004FA84E /* Image+CoreDataClass.swift in Sources */,
 				0FCFBA5C1EE0802200498C77 /* SignInViewController.swift in Sources */,
 				0F04F7831EE79F97004FA84E /* MaterialView.swift in Sources */,
