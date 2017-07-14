@@ -56,7 +56,9 @@ class ItemDetailsVCNew: UIViewController {
             item.long = long!
             
         }
-        
+        print("#########")
+        print(item)
+        print("#########")
         ad.saveContext()
         
         navigationController?.popViewController(animated: true)

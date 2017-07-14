@@ -18,7 +18,6 @@ class ItemCell: UITableViewCell {
     func configureCell(item: Item) {
         
         var dateFromString = ""
-        var itemArray = [String]()
         
         if item.date != nil {
             
